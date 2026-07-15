@@ -1,26 +1,72 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-sans);
+  
+  /* Brand Colors */
+  --color-primary: #FF6A2A;
+  --color-primary-light: #FFF0E6;
+  --color-primary-mid: #FF8C55;
+  
+  --color-text-dark: #111111;
+  --color-text-mid: #444444;
+  --color-text-soft: #555555;
+  
+  --color-bg-white: #FFFFFF;
+  --color-bg-light: #F7F8FA;
+  --color-border: #ECECEC;
+  
+  --color-tag-orange: #FF6A2A;
+  --color-tag-green: #22C55E;
+  --color-tag-dark: #111111;
+
+  /* Custom Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 50px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --background: #FFFFFF;
+  --foreground: #111111;
+  --card: #FFFFFF;
+  --card-foreground: #111111;
+  --popover: #FFFFFF;
+  --popover-foreground: #111111;
+  --primary: #FF6A2A;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F7F8FA;
+  --secondary-foreground: #111111;
+  --muted: #F7F8FA;
+  --muted-foreground: #555555;
+  --accent: #F7F8FA;
+  --accent-foreground: #111111;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #ECECEC;
+  --input: #ECECEC;
+  --ring: #FF6A2A;
+  --radius: 0.625rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-primary/50;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans scroll-smooth;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1;
+  }
 }
