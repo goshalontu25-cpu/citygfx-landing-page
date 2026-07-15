@@ -102,7 +102,7 @@ export function Hero() {
   const [isVideoOpen, setIsVideoOpen] = useState(false)
 
   return (
-    <section className="relative pt-32 md:pt-40 pb-0 overflow-hidden bg-[#FCFAF8]" id="home">
+    <section className="relative pt-32 md:pt-40 pb-0 overflow-hidden bg-white" id="home">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-br from-orange-50/50 to-transparent rounded-full blur-[100px] -z-10" />
       <motion.div 
@@ -166,7 +166,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full max-w-[700px] px-4 sm:px-0"
+                className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-6 w-full max-w-[700px] px-4 sm:px-0"
               >
                 <Link href="https://wa.me/8801617563535" target="_blank" rel="noopener noreferrer" className="w-full flex-1">
                   <button className="w-full flex items-center justify-center gap-3 h-[72px] sm:h-[80px] text-[16px] sm:text-[18px] font-bold text-white rounded-full bg-gradient-to-r from-[#FF6A00] to-[#FF7E2E] shadow-[0_20px_40px_-10px_rgba(255,106,0,0.6)] hover:-translate-y-1 hover:shadow-[0_24px_48px_-10px_rgba(255,106,0,0.7)] transition-all duration-300 group">
@@ -199,7 +199,7 @@ export function Hero() {
                       "https://res.cloudinary.com/dweciloal/image/upload/v1781722187/ZPvYyoVHWnhugLPz9PA7j7C6pQ_jofkw8.jpg",
                       "https://res.cloudinary.com/dweciloal/image/upload/v1784104425/WhatsApp_Image_2026-07-03_at_14.31.13_1_he6d4a.jpg"
                     ].map((src, i) => (
-                      <div key={i} className="w-16 h-16 sm:w-[70px] sm:h-[70px] rounded-full border-[3px] border-white overflow-hidden shadow-sm relative z-[4] hover:z-10 hover:scale-[1.03] transition-transform duration-300">
+                      <div key={i} className="w-16 h-16 sm:w-[70px] sm:h-[70px] rounded-full border-[3px] border-white overflow-hidden shadow-sm relative hover:scale-[1.03] transition-transform duration-300" style={{ zIndex: 10 - i }}>
                         <Image src={src} alt="Client" fill className="object-cover" />
                       </div>
                     ))}
