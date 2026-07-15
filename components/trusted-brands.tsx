@@ -19,7 +19,8 @@ const logos = [
   "https://res.cloudinary.com/dweciloal/image/upload/v1784100813/cl12_ccwank.png",
   "https://res.cloudinary.com/dweciloal/image/upload/v1784100813/cl11_bsmktb.png",
   "https://res.cloudinary.com/dweciloal/image/upload/v1784119907/cl13_1_zzrgu8.png",
-  "https://res.cloudinary.com/dweciloal/image/upload/v1784119906/cl13_st04wj.png"
+  "https://res.cloudinary.com/dweciloal/image/upload/v1784119906/cl13_st04wj.png",
+  "https://res.cloudinary.com/dweciloal/image/upload/v1784127062/cl14_l5kssg.png"
 ]
 
 const LogoSet = () => (
