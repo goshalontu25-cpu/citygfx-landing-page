@@ -19,7 +19,7 @@ export function Footer() {
         <div className="flex flex-col items-center text-center mb-12">
           
           {/* Brand Info */}
-          <Link href="/" className="mb-6 inline-block w-[180px]">
+          <Link href="https://www.citygfx.agency" className="mb-6 inline-block w-[180px]">
             <Image 
               src="https://res.cloudinary.com/dweciloal/image/upload/v1783445533/CG_Web_logo_u7wcsv.png" 
               alt="CityGfx" 

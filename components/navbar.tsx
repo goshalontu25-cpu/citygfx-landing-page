@@ -39,7 +39,7 @@ export function Navbar() {
     >
       <div className="container mx-auto max-w-[1280px] px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="https://www.citygfx.agency" className="flex items-center gap-2">
           <Image
             src="https://res.cloudinary.com/dweciloal/image/upload/v1783445533/CG_Web_logo_u7wcsv.png"
             alt="CityGfx Logo"
@@ -55,7 +55,7 @@ export function Navbar() {
           {navLinks.map((item) => (
             <Link
               key={item.id}
-              href={`#${item.id}`}
+              href={item.id === "home" ? "https://www.citygfx.agency" : `#${item.id}`}
               className="text-[14px] font-medium text-text-mid hover:text-primary transition-colors"
             >
               {item.label}
