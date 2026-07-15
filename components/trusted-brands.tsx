@@ -45,22 +45,32 @@ export function TrustedBrands() {
           Join 500+ forward-thinking brands who trust our creatives to scale their campaigns.
         </p>
 
-        {/* Logo Box (Mobile: flex overflow-x-auto, Desktop: grid or flex) */}
-        <div className="w-full max-w-[1000px] mx-auto bg-white rounded-[32px] shadow-[0_8px_40px_-12px_rgba(0,0,0,0.05)] border border-gray-100 p-2 sm:p-4 relative">
-          <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar divide-x divide-gray-100">
-            {logos.map((src, idx) => (
-              <div key={idx} className="w-[33.33%] min-w-[120px] sm:min-w-[160px] md:min-w-[200px] shrink-0 h-24 sm:h-32 flex items-center justify-center p-4 snap-center hover:bg-gray-50/50 transition-colors">
-                <div className="relative w-full h-full opacity-80 hover:opacity-100 transition-opacity">
-                  <Image 
-                    src={src} 
-                    alt={`Brand Logo ${idx + 1}`} 
-                    fill 
-                    className="object-contain"
-                    sizes="(max-width: 768px) 120px, 200px"
-                  />
+        {/* Logo Box (Animated Scrolling) */}
+        <div className="w-full max-w-[1000px] mx-auto bg-white rounded-[32px] shadow-[0_8px_40px_-12px_rgba(0,0,0,0.05)] border border-gray-100 p-2 sm:p-4 relative overflow-hidden">
+          {/* Gradient Masks */}
+          <div className="absolute top-0 bottom-0 left-0 w-8 sm:w-16 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none rounded-l-[32px]" />
+          <div className="absolute top-0 bottom-0 right-0 w-8 sm:w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none rounded-r-[32px]" />
+          
+          <div className="flex w-max">
+            <motion.div 
+              className="flex"
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{ repeat: Infinity, ease: "linear", duration: 35 }}
+            >
+              {[...logos, ...logos].map((src, idx) => (
+                <div key={idx} className="w-[120px] sm:w-[160px] md:w-[200px] shrink-0 h-24 sm:h-32 flex items-center justify-center p-4 hover:bg-gray-50/50 transition-colors border-r border-gray-100">
+                  <div className="relative w-full h-full opacity-80 hover:opacity-100 transition-opacity">
+                    <Image 
+                      src={src} 
+                      alt={`Brand Logo ${idx + 1}`} 
+                      fill 
+                      className="object-contain"
+                      sizes="(max-width: 768px) 120px, 200px"
+                    />
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </motion.div>
           </div>
         </div>
 
