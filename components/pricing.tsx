@@ -25,9 +25,9 @@ import * as motion from "framer-motion/client"
 
 const ovcPackages = [
   {
-    id: "starter",
-    title: "Starter Pack",
-    videos: "৩টি ভিডিও। নতুন ক্যাম্পেইন ও টেস্ট রানের জন্য পারফেক্ট।",
+    id: "silver",
+    title: "Silver (১টি OVC)",
+    videos: "১টি ভিডিও। সর্বোচ্চ ৩০ সেকেন্ড ডিউরেশন।",
     icon: Rocket,
     iconBg: "bg-blue-50",
     iconColor: "text-blue-600",
@@ -36,21 +36,21 @@ const ovcPackages = [
     buttonVariant: "outline",
     buttonClass: "border-blue-600 text-blue-600 hover:bg-blue-50 hover:text-blue-700",
     checkClass: "bg-blue-600",
-    price: "4,990",
-    originalPrice: "6,000",
+    price: "9,999",
+    originalPrice: "12,000",
     isPopular: false,
     features: [
-      { title: "স্ক্রিপ্ট", text: "সাধারণ বডি স্ক্রিপ্ট" },
-      { title: "ভয়েস", text: "স্ট্যান্ডার্ড এআই ভয়েস" },
-      { title: "এডিটিং", text: "সাধারণ কাট ও ট্রানজিশন" },
-      { title: "মিউজিক", text: "রয়্যালটি-ফ্রি মিউজিক" },
-      { title: "রিভিশন", text: "১ বার" }
+      { title: "জেনারেশন", text: "১০০% এআই জেনারেটেড" },
+      { title: "ক্যারেক্টার ও সিন", text: "মাল্টিপল ক্যারেক্টার ও প্রয়োজনীয় সিন" },
+      { title: "সাউন্ড", text: "প্রিমিয়াম সাউন্ড ডিজাইন" },
+      { title: "আউটপুট", text: "1080p ফুল-এইচডি" },
+      { title: "রিভিশন", text: "আনলিমিটেড রিভিশন" }
     ],
   },
   {
-    id: "standard",
-    title: "Standard Pack",
-    videos: "৭টি ভিডিও। ⭐ Best Value. সবচেয়ে জনপ্রিয় প্যাকেজ।",
+    id: "gold",
+    title: "Gold (২টি OVC কম্বো)",
+    videos: "২টি ভিডিওর কম্বো। প্রতিটি সর্বোচ্চ ৬০ সেকেন্ড ডিউরেশন।",
     icon: Star,
     iconBg: "bg-orange-50",
     iconColor: "text-[#FF6B2B]",
@@ -59,21 +59,21 @@ const ovcPackages = [
     buttonVariant: "default",
     buttonClass: "bg-[#FF6B2B] text-white hover:bg-[#E85E22]",
     checkClass: "bg-[#FF6B2B]",
-    price: "11,990",
-    originalPrice: "14,000",
+    price: "17,999",
+    originalPrice: "22,000",
     isPopular: true,
     features: [
-      { title: "স্ক্রিপ্ট", text: "এঙ্গেজিং হুক + কনভার্শন-ফোকাসড" },
-      { title: "ভয়েস", text: "রিয়েলিস্টিক এআই ভয়েস" },
-      { title: "এডিটিং", text: "ডাইনামিক এডিটিং + মোশন ইফেক্ট" },
-      { title: "মিউজিক", text: "ট্রেন্ডিং মিউজিক + সাউন্ড ডিজাইন" },
-      { title: "রিভিশন", text: "৩ বার" }
+      { title: "জেনারেশন", text: "১০০% এআই জেনারেটেড" },
+      { title: "ক্যারেক্টার ও সিন", text: "মাল্টিপল ক্যারেক্টার ও প্রয়োজনীয় সিন" },
+      { title: "সাউন্ড", text: "প্রিমিয়াম সাউন্ড ডিজাইন" },
+      { title: "আউটপুট", text: "1080p ফুল-এইচডি" },
+      { title: "রিভিশন", text: "আনলিমিটেড রিভিশন" }
     ],
   },
   {
-    id: "scale",
-    title: "Scale Pack",
-    videos: "১৫টি ভিডিও। এগ্রেসিভ স্কেলিং ও বড় ক্যাম্পেইনের জন্য বেস্ট।",
+    id: "platinum",
+    title: "Platinum / Premium",
+    videos: "৩টি ভিডিওর কম্বো। প্রতিটি সর্বোচ্চ ৬০ সেকেন্ড ডিউরেশন।",
     icon: Crown,
     iconBg: "bg-green-50",
     iconColor: "text-green-600",
@@ -82,24 +82,24 @@ const ovcPackages = [
     buttonVariant: "outline",
     buttonClass: "border-green-600 text-green-600 hover:bg-green-50 hover:text-green-700",
     checkClass: "bg-green-600",
-    price: "24,990",
+    price: "24,999",
     originalPrice: "30,000",
     isPopular: false,
     features: [
-      { title: "স্ক্রিপ্ট", text: "ইন-ডেপথ রিসার্চড সেলস স্ক্রিপ্ট" },
-      { title: "ভয়েস", text: "প্রিমিয়াম রিয়েলিস্টিক এআই ভয়েস" },
-      { title: "এডিটিং", text: "প্রফেশনাল মোশন গ্রাফিক্স ও কালার গ্রেডিং" },
-      { title: "মিউজিক", text: "কাস্টম সাউন্ড ডিজাইন ও এফেক্টস" },
-      { title: "রিভিশন", text: "আনলিমিটেড" }
+      { title: "জেনারেশন", text: "১০০% এআই জেনারেটেড" },
+      { title: "ক্যারেক্টার ও সিন", text: "মাল্টিপল ক্যারেক্টার ও প্রয়োজনীয় সিন" },
+      { title: "সাউন্ড", text: "প্রিমিয়াম সাউন্ড ডিজাইন" },
+      { title: "আউটপুট", text: "1080p ফুল-এইচডি" },
+      { title: "রিভিশন", text: "আনলিমিটেড রিভিশন" }
     ],
   }
 ]
 
 const talkingAdPackages = [
   {
-    id: "starter",
-    title: "Starter Pack",
-    videos: "৩টি ভিডিও। নতুন ক্যাম্পেইন ও টেস্ট রানের জন্য পারফেক্ট।",
+    id: "silver",
+    title: "Silver (১টি ভিডিও)",
+    videos: "১টি ভিডিও। ডিউরেশন সর্বোচ্চ ৩০ সেকেন্ড।",
     icon: Rocket,
     iconBg: "bg-blue-50",
     iconColor: "text-blue-600",
@@ -108,21 +108,21 @@ const talkingAdPackages = [
     buttonVariant: "outline",
     buttonClass: "border-blue-600 text-blue-600 hover:bg-blue-50 hover:text-blue-700",
     checkClass: "bg-blue-600",
-    price: "5,990",
-    originalPrice: "7,500",
+    price: "4,999",
+    originalPrice: "6,000",
     isPopular: false,
     features: [
-      { title: "স্ক্রিপ্ট", text: "ক্লায়েন্টের স্ক্রিপ্ট পলিশিং" },
-      { title: "ভয়েস", text: "স্ট্যান্ডার্ড এআই ভয়েস" },
-      { title: "ক্যাপশন", text: "সাধারণ সাবটাইটেল" },
-      { title: "ভিজ্যুয়াল", text: "বেসিক কালার কারেকশন" },
-      { title: "রিভিশন", text: "১ বার" }
+      { title: "জেনারেশন", text: "১০০% এআই জেনারেটেড" },
+      { title: "ক্যারেক্টার ও সিন", text: "সিঙ্গেল ক্যারেক্টার ও ২-৩টি ব্যাকগ্রাউন্ড" },
+      { title: "সাউন্ড", text: "প্রিমিয়াম সাউন্ড ডিজাইন" },
+      { title: "আউটপুট", text: "1080p ফুল-এইচডি" },
+      { title: "রিভিশন", text: "আনলিমিটেড রিভিশন" }
     ],
   },
   {
-    id: "standard",
-    title: "Standard Pack",
-    videos: "৭টি ভিডিও। ⭐ Best Value. সবচেয়ে জনপ্রিয় প্যাকেজ।",
+    id: "gold",
+    title: "Gold (২টি ভিডিওর কম্বো)",
+    videos: "২টি ভিডিওর কম্বো। ডিউরেশন সর্বোচ্চ ৩০ সেকেন্ড।",
     icon: Star,
     iconBg: "bg-orange-50",
     iconColor: "text-[#FF6B2B]",
@@ -131,21 +131,21 @@ const talkingAdPackages = [
     buttonVariant: "default",
     buttonClass: "bg-[#FF6B2B] text-white hover:bg-[#E85E22]",
     checkClass: "bg-[#FF6B2B]",
-    price: "12,990",
-    originalPrice: "16,000",
+    price: "8,499",
+    originalPrice: "10,000",
     isPopular: true,
     features: [
-      { title: "স্ক্রিপ্ট", text: "কিলার হুক আইডিয়া + ফুল স্ক্রিপ্ট" },
-      { title: "ভয়েস", text: "রিয়েলিস্টিক এআই ভয়েস" },
-      { title: "ক্যাপশন", text: "ডাইনামিক পপ-আপ ক্যাপশন ও হাইলাইট" },
-      { title: "ভিজ্যুয়াল", text: "রিলেভেন্ট বি-রোল ও পপ-আপ সাউন্ড" },
-      { title: "রিভিশন", text: "৩ বার" }
+      { title: "জেনারেশন", text: "১০০% এআই জেনারেটেড" },
+      { title: "ক্যারেক্টার ও সিন", text: "সিঙ্গেল ক্যারেক্টার ও ২-৩টি ব্যাকগ্রাউন্ড" },
+      { title: "সাউন্ড", text: "প্রিমিয়াম সাউন্ড ডিজাইন" },
+      { title: "আউটপুট", text: "1080p ফুল-এইচডি" },
+      { title: "রিভিশন", text: "আনলিমিটেড রিভিশন" }
     ],
   },
   {
-    id: "scale",
-    title: "Scale Pack",
-    videos: "১৫টি ভিডিও। এগ্রেসিভ স্কেলিং ও বড় ক্যাম্পেইনের জন্য বেস্ট।",
+    id: "platinum",
+    title: "Platinum / Premium",
+    videos: "৩টি ভিডিওর কম্বো। ডিউরেশন সর্বোচ্চ ৩০ সেকেন্ড।",
     icon: Crown,
     iconBg: "bg-green-50",
     iconColor: "text-green-600",
@@ -154,39 +154,49 @@ const talkingAdPackages = [
     buttonVariant: "outline",
     buttonClass: "border-green-600 text-green-600 hover:bg-green-50 hover:text-green-700",
     checkClass: "bg-green-600",
-    price: "26,990",
-    originalPrice: "32,000",
+    price: "11,999",
+    originalPrice: "15,000",
     isPopular: false,
     features: [
-      { title: "স্ক্রিপ্ট", text: "মাল্টিপল A/B টেস্টিং স্ক্রিপ্ট (কাস্টম হুক)" },
-      { title: "ভয়েস", text: "প্রিমিয়াম রিয়েলিস্টিক এআই ভয়েস" },
-      { title: "ক্যাপশন", text: "কাস্টম 3D/অ্যানিমেটেড ক্যাপশন" },
-      { title: "ভিজ্যুয়াল", text: "প্রিমিয়াম বি-রোল, জুম-কাট ও ভিজ্যুয়াল হুক" },
-      { title: "রিভিশন", text: "আনলিমিটেড" }
+      { title: "জেনারেশন", text: "১০০% এআই জেনারেটেড" },
+      { title: "ক্যারেক্টার ও সিন", text: "সিঙ্গেল ক্যারেক্টার ও ২-৩টি ব্যাকগ্রাউন্ড" },
+      { title: "সাউন্ড", text: "প্রিমিয়াম সাউন্ড ডিজাইন" },
+      { title: "আউটপুট", text: "1080p ফুল-এইচডি" },
+      { title: "রিভিশন", text: "আনলিমিটেড রিভিশন" }
     ],
   }
 ]
 
 const addons = [
   {
-    icon: MicrophoneStage,
-    title: "প্রফেশনাল হিউম্যান ভয়েস ওভার",
-    desc: "এআই ভয়েসের বদলে প্রফেশনাল ভয়েস আর্টিস্টের অরিজিনাল ভয়েস। (প্রতি ভিডিওর জন্য এক্সট্রা চার্জ যুক্ত হবে)"
+    icon: Video,
+    title: "4K রেজোলিউশন আপগ্রেড",
+    desc: "৳২,০০০ (প্রতিটি ভিডিওর জন্য)"
   },
   {
-    icon: FileVideo,
-    title: "অ্যাডিশনাল/এক্সট্রা ভিডিও",
-    desc: "প্যাকেজ লিমিট শেষ হওয়ার পর এক্সট্রা ভিডিও লাগলে, সিঙ্গেল ভিডিও হিসেবে অ্যাড করতে পারবেন।"
+    icon: Clock,
+    title: "অতিরিক্ত ডিউরেশন (OVC)",
+    desc: "৳৫,০০০ (প্রতি অতিরিক্ত ৩০ সেকেন্ডে)"
+  },
+  {
+    icon: Clock,
+    title: "অতিরিক্ত ডিউরেশন (Talking Head)",
+    desc: "৳১,৫০০ (প্রতি অতিরিক্ত ৩০ সেকেন্ডে)"
   },
   {
     icon: RocketLaunch,
-    title: "ফাস্ট ডেলিভারি (Fast Track)",
-    desc: "সাধারণ ডেলিভারি সময়ের আগে (২৪-৪৮ ঘণ্টা) ইমার্জেন্সি ভিডিও ডেলিভারি। (এক্সট্রা ফি প্রযোজ্য)"
+    title: "শর্টস/রিলস এক্সট্রাকশন",
+    desc: "৳৩,০০০ (মেইন ভিডিও থেকে প্রতি রিলের জন্য)"
+  },
+  {
+    icon: FileVideo,
+    title: "কাস্টম থাম্বনেইল ডিজাইন",
+    desc: "৳১,৫০০ (প্রতিটি ভিডিওর জন্য)"
   },
   {
     icon: FolderOpen,
-    title: "র-ফাইল (Source File)",
-    desc: "ফিউচারে এডিট করার জন্য প্রিমিয়ার প্রো বা আফটার ইফেক্টসের প্রজেক্ট ফাইল। (ওয়ান-টাইম এক্সট্রা ফি)"
+    title: "প্রজেক্ট ফাইল / সোর্স ফাইল হস্তান্তর",
+    desc: "৳৫,০০০ (এককালীন)"
   }
 ]
 
@@ -366,7 +376,7 @@ export function Pricing() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {addons.map((addon, idx) => (
               <GlassCard key={idx} className="p-6 bg-white border border-border shadow-[0_8px_30px_rgba(0,0,0,0.04)] flex flex-col items-center text-center hover:border-[#FF6B2B]/30 hover:shadow-lg transition-all group cursor-pointer">
                 <div className="w-14 h-14 rounded-full bg-orange-50 text-[#FF6B2B] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
