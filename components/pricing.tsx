@@ -19,7 +19,8 @@ import {
   PiMicrophoneStageFill as MicrophoneStage,
   PiFileVideoFill as FileVideo,
   PiRocketLaunchFill as RocketLaunch,
-  PiFolderOpenFill as FolderOpen
+  PiFolderOpenFill as FolderOpen,
+  PiCaretRightBold as CaretRight
 } from "react-icons/pi"
 import * as motion from "framer-motion/client"
 
@@ -206,28 +207,32 @@ const trustIndicators = [
     title: "100% Satisfaction",
     desc: "Your growth is our guarantee",
     colorClass: "text-[#FF6B2B]",
-    bgClass: "bg-orange-50"
+    bgClass: "bg-orange-50",
+    borderClass: "border-l-[#FF6B2B]"
   },
   {
     icon: Clock,
     title: "Lightning Fast Delivery",
     desc: "Never miss a campaign launch",
     colorClass: "text-[#FF6B2B]",
-    bgClass: "bg-orange-50"
+    bgClass: "bg-orange-50",
+    borderClass: "border-l-[#FF6B2B]"
   },
   {
     icon: Headphones,
     title: "24/7 VIP Support",
     desc: "Always here when you need us",
     colorClass: "text-green-500",
-    bgClass: "bg-green-50"
+    bgClass: "bg-green-50",
+    borderClass: "border-l-green-500"
   },
   {
     icon: RefreshCw,
     title: "Flexible Revisions",
     desc: "We tweak until it's perfect",
     colorClass: "text-blue-500",
-    bgClass: "bg-blue-50"
+    bgClass: "bg-blue-50",
+    borderClass: "border-l-blue-500"
   }
 ]
 
@@ -364,19 +369,37 @@ export function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-16 md:mt-20 w-full bg-white rounded-2xl border border-border p-6 md:p-8 shadow-sm flex flex-col md:flex-row items-center justify-between divide-y md:divide-y-0 md:divide-x divide-border"
+          className="mt-16 md:mt-24 w-full max-w-[800px] mx-auto bg-white rounded-[32px] border border-gray-100/50 p-6 md:p-10 shadow-[0_8px_40px_rgba(0,0,0,0.03)]"
         >
-          {trustIndicators.map((item, idx) => (
-            <div key={idx} className="flex items-center gap-4 w-full md:w-1/4 md:justify-center py-5 md:py-0 first:pt-0 last:pb-0 md:px-4 md:first:pl-0 md:last:pr-0">
-              <div className={`w-12 h-12 shrink-0 rounded-full ${item.bgClass} flex items-center justify-center ${item.colorClass}`}>
-                <item.icon className="w-5 h-5" />
+          <div className="flex flex-col gap-4 md:gap-5">
+            {trustIndicators.map((item, idx) => (
+              <div 
+                key={idx} 
+                className={`flex items-center justify-between p-4 md:p-6 bg-white rounded-2xl border border-gray-100 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-md transition-shadow border-l-[3px] group cursor-default ${item.borderClass}`}
+              >
+                <div className="flex items-center gap-5 md:gap-6">
+                  {/* Icon with radial glow */}
+                  <div className="relative flex items-center justify-center shrink-0 w-12 h-12 md:w-14 md:h-14">
+                    <div className={`absolute inset-0 rounded-full scale-125 blur-xl opacity-70 ${item.bgClass}`}></div>
+                    <div className={`relative z-10 w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center ${item.bgClass} ${item.colorClass}`}>
+                      <item.icon className="w-6 h-6 md:w-7 md:h-7" />
+                    </div>
+                  </div>
+                  
+                  {/* Text */}
+                  <div className="flex flex-col">
+                    <span className="text-[16px] md:text-[18px] font-bold text-text-dark mb-0.5 md:mb-1">{item.title}</span>
+                    <span className="text-[13px] md:text-[15px] text-text-soft font-medium">{item.desc}</span>
+                  </div>
+                </div>
+
+                {/* Right Arrow */}
+                <div className={`w-8 h-8 md:w-10 md:h-10 shrink-0 rounded-full flex items-center justify-center ${item.bgClass} ${item.colorClass} opacity-80 group-hover:opacity-100 transition-opacity`}>
+                  <CaretRight className="w-4 h-4 md:w-5 md:h-5" />
+                </div>
               </div>
-              <div className="flex flex-col">
-                <span className="text-[14px] font-bold text-text-dark leading-tight mb-1">{item.title}</span>
-                <span className="text-[11px] font-medium text-text-soft leading-snug">{item.desc}</span>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </motion.div>
         
       </div>
