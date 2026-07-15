@@ -23,61 +23,56 @@ const logos = [
   "https://res.cloudinary.com/dweciloal/image/upload/v1784127062/cl14_l5kssg.png"
 ]
 
-const LogoSet = () => (
-  <div className="flex items-center gap-16 md:gap-24 pr-16 md:pr-24 shrink-0">
-    {logos.map((src, idx) => (
-      <div key={idx} className="relative w-32 h-14 md:w-40 md:h-16 transition-transform hover:scale-105 duration-300">
-        <Image 
-          src={src} 
-          alt={`Brand Logo ${idx + 1}`} 
-          fill 
-          className="object-contain"
-          sizes="(max-width: 768px) 128px, 160px"
-        />
-      </div>
-    ))}
-  </div>
-)
-
 export function TrustedBrands() {
   return (
-    <section className="pt-6 md:pt-8 pb-8 md:pb-12 border-b border-border bg-white overflow-hidden relative">
+    <section className="pt-8 md:pt-16 pb-12 md:pb-20 border-b border-border bg-[#FCFAF8] overflow-hidden relative">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="container mx-auto px-4 md:px-6 mb-10 md:mb-12 flex flex-col items-center"
+        className="container mx-auto px-4 md:px-6 flex flex-col items-center text-center"
       >
-        <div className="inline-flex items-center gap-2 bg-orange-50 text-[#FF6B2B] px-4 py-1.5 rounded-full text-[12px] font-bold tracking-widest uppercase mb-6 shadow-sm">
+        <div className="inline-flex items-center gap-2 bg-[#FEF0E6] text-[#F05A1B] px-5 py-2 rounded-full text-[13px] font-bold tracking-widest uppercase mb-6 shadow-sm">
           <ShieldCheck className="w-4 h-4" />
           TRUSTED PARTNERS
         </div>
 
-        <h2 className="text-[24px] sm:text-[28px] md:text-[40px] font-extrabold text-text-dark leading-tight mb-4 text-center px-4">
-            Brands That Want <span className="text-[#FF6B2B]">Results</span>
+        <h2 className="text-[32px] sm:text-[40px] md:text-[48px] font-black text-[#111111] leading-tight mb-4 px-4">
+            Brands That Want <span className="text-[#FF5A00]">Results</span>
         </h2>
-        <p className="text-[16px] text-text-soft font-medium text-center max-w-[600px]">
+        <p className="text-[16px] md:text-[18px] text-gray-600 font-medium max-w-[600px] mb-12">
           Join 500+ forward-thinking brands who trust our creatives to scale their campaigns.
         </p>
-      </motion.div>
 
-      <div className="relative w-full overflow-hidden flex items-center">
-        {/* Gradient masks for seamless edges */}
-        <div className="absolute top-0 bottom-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-        <div className="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
-        
-        <div className="flex w-max transition-colors duration-500">
-          <motion.div 
-            className="flex"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ repeat: Infinity, ease: "linear", duration: 30 }}
-          >
-            <LogoSet />
-            <LogoSet />
-          </motion.div>
+        {/* Logo Box (Mobile: flex overflow-x-auto, Desktop: grid or flex) */}
+        <div className="w-full max-w-[1000px] mx-auto bg-white rounded-[32px] shadow-[0_8px_40px_-12px_rgba(0,0,0,0.05)] border border-gray-100 p-2 sm:p-4 relative">
+          <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar divide-x divide-gray-100">
+            {logos.map((src, idx) => (
+              <div key={idx} className="w-[33.33%] min-w-[120px] sm:min-w-[160px] md:min-w-[200px] shrink-0 h-24 sm:h-32 flex items-center justify-center p-4 snap-center hover:bg-gray-50/50 transition-colors">
+                <div className="relative w-full h-full opacity-80 hover:opacity-100 transition-opacity">
+                  <Image 
+                    src={src} 
+                    alt={`Brand Logo ${idx + 1}`} 
+                    fill 
+                    className="object-contain"
+                    sizes="(max-width: 768px) 120px, 200px"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+
+        {/* Pagination Dots */}
+        <div className="flex items-center justify-center gap-2 mt-8">
+          <div className="w-2 h-2 rounded-full bg-[#FF5A00]"></div>
+          <div className="w-2 h-2 rounded-full bg-gray-200"></div>
+          <div className="w-2 h-2 rounded-full bg-gray-200"></div>
+          <div className="w-2 h-2 rounded-full bg-gray-200"></div>
+        </div>
+
+      </motion.div>
     </section>
   )
 }

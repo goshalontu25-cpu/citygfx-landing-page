@@ -235,45 +235,56 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-12 md:mt-16 w-full bg-white rounded-3xl border border-border px-4 py-8 md:px-8 md:py-6 shadow-sm grid grid-cols-2 md:flex md:flex-row items-stretch md:items-center justify-between md:gap-4 md:divide-x divide-border"
+          className="mt-12 md:mt-16 w-full max-w-[1000px] mx-auto bg-white rounded-[32px] shadow-[0_8px_40px_-12px_rgba(0,0,0,0.05)] relative p-8 sm:p-12"
         >
-          <div className="flex flex-col items-center justify-center w-full md:w-1/4 gap-2 md:gap-3 border-b border-r border-border pb-6 pr-2 md:border-none md:pb-0 md:pr-0">
-            <div className="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center text-[#FF6B2B]">
-              <Video className="w-6 h-6" />
-            </div>
-            <div className="text-center">
-              <div className="text-[24px] md:text-[28px] font-extrabold text-[#FF6B2B] leading-none mb-1"><AnimatedNumber value={600} suffix="+" /></div>
-              <div className="text-[10px] sm:text-[12px] md:text-[14px] font-semibold text-text-soft whitespace-nowrap">Commercials & UGC</div>
-            </div>
-          </div>
-          
-          <div className="flex flex-col items-center justify-center w-full md:w-1/4 gap-2 md:gap-3 border-b border-border pb-6 pl-2 md:border-none md:pb-0 md:pl-0">
-            <div className="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center text-[#FF6B2B]">
-              <Smile className="w-6 h-6" />
-            </div>
-            <div className="text-center">
-              <div className="text-[24px] md:text-[28px] font-extrabold text-[#FF6B2B] leading-none mb-1"><AnimatedNumber value={98} suffix="%" /></div>
-              <div className="text-[10px] sm:text-[12px] md:text-[14px] font-semibold text-text-soft whitespace-nowrap">Client Satisfaction</div>
-            </div>
-          </div>
-          
-          <div className="flex flex-col items-center justify-center w-full md:w-1/4 gap-2 md:gap-3 border-r border-border pt-6 pr-2 md:border-none md:pt-0 md:pr-0">
-            <div className="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center text-[#FF6B2B]">
-              <Star className="w-6 h-6" />
-            </div>
-            <div className="text-center">
-              <div className="text-[24px] md:text-[28px] font-extrabold text-[#FF6B2B] leading-none mb-1"><AnimatedNumber value={8} suffix="+" /></div>
-              <div className="text-[10px] sm:text-[12px] md:text-[14px] font-semibold text-text-soft whitespace-nowrap">Years of Experience</div>
-            </div>
-          </div>
+          {/* Corner Accents */}
+          <div className="absolute top-0 left-0 w-8 sm:w-10 h-8 sm:h-10 border-t-[3px] border-l-[3px] border-[#FF5A00] rounded-tl-[32px] opacity-80" />
+          <div className="absolute bottom-0 right-0 w-8 sm:w-10 h-8 sm:h-10 border-b-[3px] border-r-[3px] border-[#FF5A00] rounded-br-[32px] opacity-80" />
 
-          <div className="flex flex-col items-center justify-center w-full md:w-1/4 gap-2 md:gap-3 pt-6 pl-2 md:border-none md:pt-0 md:pl-0">
-            <div className="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center text-[#FF6B2B]">
-              <Headphones className="w-6 h-6" />
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-12 sm:gap-y-16 lg:gap-y-0 relative">
+            {/* Desktop Dividers */}
+            <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 left-[25%] w-[1px] h-2/3 bg-gray-100" />
+            <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 left-[50%] w-[1px] h-2/3 bg-gray-100" />
+            <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 left-[75%] w-[1px] h-2/3 bg-gray-100" />
+
+            {/* Mobile Dividers */}
+            <div className="lg:hidden absolute top-1/2 -translate-y-1/2 left-[50%] w-[1px] h-full bg-gray-100" />
+            <div className="lg:hidden absolute top-[50%] -translate-y-1/2 left-[10%] right-[10%] h-[1px] bg-gray-100" />
+
+            <div className="flex flex-col items-center justify-center text-center">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-[18px] bg-[#FEF0E6] flex items-center justify-center text-[#FF5A00] mb-4">
+                <Video className="w-6 h-6 sm:w-7 sm:h-7" />
+              </div>
+              <div className="text-[28px] sm:text-[32px] font-black text-[#FF5A00] leading-none mb-1.5"><AnimatedNumber value={600} suffix="+" /></div>
+              <div className="text-[12px] sm:text-[14px] font-bold text-[#111111] mb-2 sm:mb-3">Commercials & UGC</div>
+              <div className="w-4 h-[3px] bg-[#FF5A00] rounded-full" />
             </div>
-            <div className="text-center">
-              <div className="text-[24px] md:text-[28px] font-extrabold text-[#FF6B2B] leading-none mb-1"><AnimatedNumber value={24} suffix="/7" /></div>
-              <div className="text-[10px] sm:text-[12px] md:text-[14px] font-semibold text-text-soft whitespace-nowrap">Dedicated Support</div>
+            
+            <div className="flex flex-col items-center justify-center text-center">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-[18px] bg-[#FEF0E6] flex items-center justify-center text-[#FF5A00] mb-4">
+                <Smile className="w-6 h-6 sm:w-7 sm:h-7" />
+              </div>
+              <div className="text-[28px] sm:text-[32px] font-black text-[#FF5A00] leading-none mb-1.5"><AnimatedNumber value={98} suffix="%" /></div>
+              <div className="text-[12px] sm:text-[14px] font-bold text-[#111111] mb-2 sm:mb-3">Client Satisfaction</div>
+              <div className="w-4 h-[3px] bg-[#FF5A00] rounded-full" />
+            </div>
+            
+            <div className="flex flex-col items-center justify-center text-center">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-[18px] bg-[#FEF0E6] flex items-center justify-center text-[#FF5A00] mb-4">
+                <Star className="w-6 h-6 sm:w-7 sm:h-7" />
+              </div>
+              <div className="text-[28px] sm:text-[32px] font-black text-[#FF5A00] leading-none mb-1.5"><AnimatedNumber value={8} suffix="+" /></div>
+              <div className="text-[12px] sm:text-[14px] font-bold text-[#111111] mb-2 sm:mb-3">Years of Experience</div>
+              <div className="w-4 h-[3px] bg-[#FF5A00] rounded-full" />
+            </div>
+
+            <div className="flex flex-col items-center justify-center text-center">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-[18px] bg-[#FEF0E6] flex items-center justify-center text-[#FF5A00] mb-4">
+                <Headphones className="w-6 h-6 sm:w-7 sm:h-7" />
+              </div>
+              <div className="text-[28px] sm:text-[32px] font-black text-[#FF5A00] leading-none mb-1.5"><AnimatedNumber value={24} suffix="/7" /></div>
+              <div className="text-[12px] sm:text-[14px] font-bold text-[#111111] mb-2 sm:mb-3">Dedicated Support</div>
+              <div className="w-4 h-[3px] bg-[#FF5A00] rounded-full" />
             </div>
           </div>
         </motion.div>

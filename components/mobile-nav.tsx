@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
+import { motion } from "framer-motion"
 import { usePathname } from "next/navigation"
 import { 
   PiHouseFill as HomeIcon, 
@@ -42,27 +43,30 @@ export function MobileNav() {
   ]
 
   return (
-    <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-lg border-t border-border z-50 px-2 pb-[env(safe-area-inset-bottom)]">
-      <nav className="flex items-center justify-around h-[68px]">
+    <div className="md:hidden fixed bottom-4 left-4 right-4 bg-white shadow-[0_8px_32px_-8px_rgba(0,0,0,0.12)] border border-gray-100 rounded-[32px] z-50 px-2 pb-[env(safe-area-inset-bottom)]">
+      <nav className="flex items-center justify-around h-[72px]">
         {navItems.map((item) => (
           <Link
             key={item.id}
             href={item.href}
             onClick={() => setActiveTab(item.id)}
-            className="flex flex-col items-center justify-center w-full h-full space-y-1 relative"
+            className="flex flex-col items-center justify-center w-full h-full relative"
           >
             <item.icon 
-              className={`w-6 h-6 transition-colors duration-200 ${
-                activeTab === item.id ? "text-primary" : "text-text-soft"
+              className={`w-[22px] h-[22px] transition-colors duration-200 ${
+                activeTab === item.id ? "text-[#FF5A00]" : "text-gray-500"
               }`} 
             />
             <span 
-              className={`text-[10px] font-bold transition-colors duration-200 ${
-                activeTab === item.id ? "text-primary" : "text-text-soft"
+              className={`text-[10px] font-bold transition-colors duration-200 mt-1.5 ${
+                activeTab === item.id ? "text-[#FF5A00]" : "text-gray-500"
               }`}
             >
               {item.label}
             </span>
+            {activeTab === item.id && (
+              <motion.div layoutId="mobileNavIndicator" className="absolute bottom-2 w-4 h-[3px] bg-[#FF5A00] rounded-full" />
+            )}
           </Link>
         ))}
       </nav>
