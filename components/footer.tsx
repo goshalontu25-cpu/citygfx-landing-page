@@ -28,11 +28,11 @@ export function Footer() {
           {/* Brand Info */}
           <Link href="https://www.citygfx.agency" className="mb-5 inline-block w-[160px]">
             <Image 
-              src="https://res.cloudinary.com/dweciloal/image/upload/v1783445533/CG_Web_logo_u7wcsv.png" 
+              src="https://res.cloudinary.com/dweciloal/image/upload/v1784128058/footer_logo_white_oiqlzu.png" 
               alt="CityGfx" 
               width={180} 
               height={50} 
-              className="w-auto h-auto object-contain brightness-0 invert" 
+              className="w-auto h-auto object-contain" 
               priority
             />
           </Link>
