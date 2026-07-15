@@ -16,7 +16,8 @@ import {
   PiSquaresFourFill as Grid2X2,
   PiXBold as X,
   PiVideoCameraFill as Video,
-  PiMicrophoneFill as Microphone
+  PiMicrophoneFill as Microphone,
+  PiPlayCircleFill
 } from "react-icons/pi"
 import * as motion from "framer-motion/client"
 import { AnimatePresence } from "framer-motion"
@@ -215,8 +216,9 @@ export function Portfolio() {
 
               {/* Center Play Button */}
               <div className="absolute inset-0 flex items-center justify-center z-10">
-                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-xl transform transition-transform duration-300 group-hover:scale-110">
-                  <Play className={`w-6 h-6 fill-current ${item.playColor} ml-1`} />
+                <div className="relative flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="absolute w-10 h-10 sm:w-16 sm:h-16 bg-white rounded-full" />
+                  <PiPlayCircleFill className="relative z-10 w-20 h-20 sm:w-32 sm:h-32 text-[#FF6A00] drop-shadow-2xl" />
                 </div>
               </div>
 
