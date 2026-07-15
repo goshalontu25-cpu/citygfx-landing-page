@@ -375,7 +375,7 @@ export function Pricing() {
             {trustIndicators.map((item, idx) => (
               <div 
                 key={idx} 
-                className={`flex flex-col sm:flex-row items-start sm:items-center justify-between p-5 md:p-6 bg-white rounded-2xl border border-gray-100 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-md transition-shadow border-l-[3px] group cursor-default ${item.borderClass} gap-4 sm:gap-2`}
+                className={`flex flex-row items-center justify-between p-4 md:p-6 bg-white rounded-2xl border border-gray-100 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-md transition-shadow border-l-[3px] group cursor-default ${item.borderClass} gap-3 md:gap-4`}
               >
                 <div className="flex items-center gap-4">
                   {/* Icon with radial glow */}
@@ -394,7 +394,7 @@ export function Pricing() {
                 </div>
 
                 {/* Right Arrow */}
-                <div className={`hidden sm:flex w-8 h-8 shrink-0 rounded-full items-center justify-center ${item.bgClass} ${item.colorClass} opacity-80 group-hover:opacity-100 transition-opacity ml-auto`}>
+                <div className={`flex w-8 h-8 shrink-0 rounded-full items-center justify-center ${item.bgClass} ${item.colorClass} opacity-80 group-hover:opacity-100 transition-opacity ml-auto`}>
                   <CaretRight className="w-4 h-4" />
                 </div>
               </div>
