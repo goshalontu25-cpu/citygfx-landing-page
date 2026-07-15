@@ -24,24 +24,24 @@ const features = [
     title: "UGC Production",
     description: "Real creators. Real emotions. Authentic UGC that feels organic and drives massive ROI on paid social.",
     icon: Clapperboard,
-    themeColor: "#7C3AED",
-    bgLight: "#F5F3FF"
+    themeColor: "#FF6A00",
+    bgLight: "#FFF4ED"
   },
   {
     num: "03",
     title: "Creative Strategy",
     description: "Data-driven concepts, hooks, and offers built on proven psychological triggers and performance insights.",
     icon: MonitorPlay,
-    themeColor: "#10B981",
-    bgLight: "#ECFDF5"
+    themeColor: "#FF6A00",
+    bgLight: "#FFF4ED"
   },
   {
     num: "04",
     title: "Editing & Post-Production",
     description: "Fast. Clean. Premium. Every frame optimized to hold attention and maximize conversions.",
     icon: TrendingUp,
-    themeColor: "#3B82F6",
-    bgLight: "#EFF6FF"
+    themeColor: "#FF6A00",
+    bgLight: "#FFF4ED"
   }
 ]
 
