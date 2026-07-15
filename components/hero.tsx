@@ -158,65 +158,75 @@ export function Hero() {
               </p>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mt-10 w-full px-4 sm:px-0"
-            >
-              <Link href="https://wa.me/8801617563535" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto flex items-center justify-center gap-3 h-[72px] sm:h-[80px] px-8 sm:px-12 text-[16px] sm:text-[18px] font-bold text-white rounded-full bg-gradient-to-r from-[#FF6A00] to-[#FF7E2E] shadow-[0_20px_40px_-10px_rgba(255,106,0,0.6)] hover:-translate-y-1 hover:shadow-[0_24px_48px_-10px_rgba(255,106,0,0.7)] transition-all duration-300 group">
-                  <PiPaperPlaneTiltFill className="w-6 h-6" />
-                  Start Your Project
-                  <PiCaretRightBold className="w-5 h-5 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
-                </button>
-              </Link>
-              <Link href="#portfolio" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto flex items-center justify-center gap-3 h-[72px] sm:h-[80px] px-8 sm:px-12 text-[16px] sm:text-[18px] font-bold text-[#111111] rounded-full bg-white shadow-[0_8px_24px_-12px_rgba(0,0,0,0.1)] hover:-translate-y-1 hover:bg-[#FAFAFA] hover:shadow-[0_12px_32px_-12px_rgba(0,0,0,0.15)] transition-all duration-300 border border-gray-200 group">
-                  <PiPlayCircle className="w-7 h-7 transition-transform duration-300 group-hover:scale-105" />
-                  Watch Our Work
-                </button>
-              </Link>
-            </motion.div>
-
-            {/* Trust Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-6 mt-14 w-full"
-            >
-              <div className="flex -space-x-4 sm:-space-x-5">
-                {[
-                  "https://res.cloudinary.com/dweciloal/image/upload/v1781728323/516560586_10131331804729044_953580499398814400_n_gmmqls.jpg",
-                  "https://res.cloudinary.com/dweciloal/image/upload/v1781722188/LZhoIQjMJryaBBvg8bUY2KgznY4_sgv9hv.webp",
-                  "https://res.cloudinary.com/dweciloal/image/upload/v1781722187/ZPvYyoVHWnhugLPz9PA7j7C6pQ_jofkw8.jpg",
-                  "https://res.cloudinary.com/dweciloal/image/upload/v1784104425/WhatsApp_Image_2026-07-03_at_14.31.13_1_he6d4a.jpg"
-                ].map((src, i) => (
-                  <div key={i} className="w-16 h-16 sm:w-[70px] sm:h-[70px] rounded-full border-[3px] border-white overflow-hidden shadow-sm relative z-[4] hover:z-10 hover:scale-[1.03] transition-transform duration-300">
-                    <Image src={src} alt="Client" fill className="object-cover" />
-                  </div>
-                ))}
-              </div>
+            {/* Buttons and Trust Row Container */}
+            <div className="flex flex-col items-center w-full mt-10">
               
-              <div className="w-[1px] h-14 bg-gray-200 hidden sm:block mx-2"></div>
+              {/* Buttons Row */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full max-w-[700px] px-4 sm:px-0"
+              >
+                <Link href="https://wa.me/8801617563535" target="_blank" rel="noopener noreferrer" className="w-full flex-1">
+                  <button className="w-full flex items-center justify-center gap-3 h-[72px] sm:h-[80px] text-[16px] sm:text-[18px] font-bold text-white rounded-full bg-gradient-to-r from-[#FF6A00] to-[#FF7E2E] shadow-[0_20px_40px_-10px_rgba(255,106,0,0.6)] hover:-translate-y-1 hover:shadow-[0_24px_48px_-10px_rgba(255,106,0,0.7)] transition-all duration-300 group">
+                    <PiPaperPlaneTiltFill className="w-6 h-6" />
+                    Start Your Project
+                    <PiCaretRightBold className="w-5 h-5 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
+                  </button>
+                </Link>
+                <Link href="#portfolio" className="w-full flex-1">
+                  <button className="w-full flex items-center justify-center gap-3 h-[72px] sm:h-[80px] text-[16px] sm:text-[18px] font-bold text-[#111111] rounded-full bg-white shadow-[0_8px_24px_-12px_rgba(0,0,0,0.1)] hover:-translate-y-1 hover:bg-[#FAFAFA] hover:shadow-[0_12px_32px_-12px_rgba(0,0,0,0.15)] transition-all duration-300 border border-gray-200 group">
+                    <PiPlayCircle className="w-7 h-7 transition-transform duration-300 group-hover:scale-105" />
+                    Watch Our Work
+                  </button>
+                </Link>
+              </motion.div>
 
-              <div className="flex flex-col justify-center text-center sm:text-left">
-                <div className="flex items-center justify-center sm:justify-start gap-1 mb-1.5">
-                  {[1, 2, 3, 4, 5].map((s) => (
-                    <Star key={s} className="w-5 h-5 sm:w-[22px] sm:h-[22px] text-[#FF6A00] hover:drop-shadow-[0_0_4px_rgba(255,106,0,0.5)] transition-all duration-300" />
-                  ))}
+              {/* Trust Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="grid grid-cols-1 sm:grid-cols-2 items-center w-full max-w-[700px] mt-12 gap-y-8 sm:gap-y-0"
+              >
+                {/* Left 50% - Avatars */}
+                <div className="flex justify-center sm:justify-end sm:pr-8 relative">
+                  <div className="flex -space-x-4 sm:-space-x-5">
+                    {[
+                      "https://res.cloudinary.com/dweciloal/image/upload/v1781728323/516560586_10131331804729044_953580499398814400_n_gmmqls.jpg",
+                      "https://res.cloudinary.com/dweciloal/image/upload/v1781722188/LZhoIQjMJryaBBvg8bUY2KgznY4_sgv9hv.webp",
+                      "https://res.cloudinary.com/dweciloal/image/upload/v1781722187/ZPvYyoVHWnhugLPz9PA7j7C6pQ_jofkw8.jpg",
+                      "https://res.cloudinary.com/dweciloal/image/upload/v1784104425/WhatsApp_Image_2026-07-03_at_14.31.13_1_he6d4a.jpg"
+                    ].map((src, i) => (
+                      <div key={i} className="w-16 h-16 sm:w-[70px] sm:h-[70px] rounded-full border-[3px] border-white overflow-hidden shadow-sm relative z-[4] hover:z-10 hover:scale-[1.03] transition-transform duration-300">
+                        <Image src={src} alt="Client" fill className="object-cover" />
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Vertical Divider */}
+                  <div className="hidden sm:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-14 bg-gray-200"></div>
                 </div>
-                <div className="flex flex-col leading-tight">
-                  <span className="text-[16px] sm:text-[18px] font-extrabold text-[#1E1E1E]">
-                    Trusted by 500+ Brands
-                  </span>
-                  <span className="text-[13px] sm:text-[15px] font-medium text-[#777777] mt-0.5">
-                    Across the globe
-                  </span>
+                
+                {/* Right 50% - Rating */}
+                <div className="flex flex-col justify-center text-center sm:text-left sm:pl-8">
+                  <div className="flex items-center justify-center sm:justify-start gap-1 mb-1.5">
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <Star key={s} className="w-5 h-5 sm:w-[22px] sm:h-[22px] text-[#FF6A00] hover:drop-shadow-[0_0_4px_rgba(255,106,0,0.5)] transition-all duration-300" />
+                    ))}
+                  </div>
+                  <div className="flex flex-col leading-tight">
+                    <span className="text-[16px] sm:text-[18px] font-extrabold text-[#1E1E1E]">
+                      Trusted by 500+ Brands
+                    </span>
+                    <span className="text-[13px] sm:text-[15px] font-medium text-[#777777] mt-0.5">
+                      Across the globe
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </div>
 
           {/* Centered Video Thumbnail */}
