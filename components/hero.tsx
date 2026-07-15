@@ -131,7 +131,7 @@ export function Hero() {
               transition={{ duration: 0.6 }}
               className="flex flex-col items-center w-full"
             >
-              <div className="inline-flex items-center justify-center gap-2 bg-[#FEF0E6] text-[#F05A1B] px-5 py-2 rounded-full text-[13px] sm:text-[15px] font-medium mb-6 sm:mb-8 shadow-sm">
+              <div className="inline-flex items-center justify-center gap-2 bg-[#FEF0E6] text-[#F05A1B] px-5 py-2 rounded-full text-[13px] sm:text-[15px] font-medium mb-6 sm:mb-8">
                 <Rocket className="w-4 h-4 shrink-0" />
                 <span>Top-Rated AI Video Ads & Commercial Studio</span>
               </div>
@@ -142,7 +142,7 @@ export function Hero() {
                   Start the <span className="relative inline-block">
                     Sales.
                     {/* Underline SVG */}
-                    <svg className="absolute w-[110%] -bottom-[8%] left-[-5%] text-[#FF5A00] h-4 sm:h-6" viewBox="0 0 300 15" fill="none" preserveAspectRatio="none">
+                    <svg className="absolute w-[110%] -bottom-[15%] left-[-5%] text-[#FF5A00] h-4 sm:h-6" viewBox="0 0 300 15" fill="none" preserveAspectRatio="none">
                       <path d="M2 13 C 50 2, 150 -2, 298 10" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
                     </svg>
                   </span>
@@ -193,15 +193,15 @@ export function Hero() {
                 className="grid grid-cols-2 items-center w-full max-w-[700px] mt-8 sm:mt-12 gap-0"
               >
                 {/* Left 50% - Avatars */}
-                <div className="flex justify-end pr-4 sm:pr-8 relative">
-                  <div className="flex -space-x-3 sm:-space-x-5">
+                <div className="flex justify-center sm:justify-end sm:pr-8 relative">
+                  <div className="flex -space-x-4 sm:-space-x-5">
                     {[
                       "https://res.cloudinary.com/dweciloal/image/upload/v1781728323/516560586_10131331804729044_953580499398814400_n_gmmqls.jpg",
                       "https://res.cloudinary.com/dweciloal/image/upload/v1781722188/LZhoIQjMJryaBBvg8bUY2KgznY4_sgv9hv.webp",
                       "https://res.cloudinary.com/dweciloal/image/upload/v1781722187/ZPvYyoVHWnhugLPz9PA7j7C6pQ_jofkw8.jpg",
                       "https://res.cloudinary.com/dweciloal/image/upload/v1784104425/WhatsApp_Image_2026-07-03_at_14.31.13_1_he6d4a.jpg"
                     ].map((src, i) => (
-                      <div key={i} className="w-10 h-10 sm:w-[70px] sm:h-[70px] rounded-full border-[2px] sm:border-[3px] border-white overflow-hidden shadow-sm relative hover:scale-[1.03] transition-transform duration-300" style={{ zIndex: 10 - i }}>
+                      <div key={i} className="w-12 h-12 sm:w-[70px] sm:h-[70px] rounded-full border-[2px] sm:border-[3px] border-white overflow-hidden shadow-sm relative hover:scale-[1.03] transition-transform duration-300" style={{ zIndex: 10 - i }}>
                         <Image src={src} alt="Client" fill className="object-cover" />
                       </div>
                     ))}
@@ -212,19 +212,21 @@ export function Hero() {
                 </div>
                 
                 {/* Right 50% - Rating */}
-                <div className="flex flex-col justify-center text-left pl-4 sm:pl-8">
-                  <div className="flex items-center justify-start gap-0.5 sm:gap-1 mb-1 sm:mb-1.5">
-                    {[1, 2, 3, 4, 5].map((s) => (
-                      <Star key={s} className="w-3 h-3 sm:w-[22px] sm:h-[22px] text-[#FF6A00] hover:drop-shadow-[0_0_4px_rgba(255,106,0,0.5)] transition-all duration-300" />
-                    ))}
-                  </div>
-                  <div className="flex flex-col leading-tight">
-                    <span className="text-[11px] sm:text-[18px] font-extrabold text-[#1E1E1E]">
-                      Trusted by 500+ Brands
-                    </span>
-                    <span className="text-[9px] sm:text-[15px] font-medium text-[#777777] mt-0.5">
-                      Across the globe
-                    </span>
+                <div className="flex justify-center sm:justify-start sm:pl-8">
+                  <div className="flex flex-col justify-center text-left">
+                    <div className="flex items-center justify-start gap-0.5 sm:gap-1 mb-1 sm:mb-1.5">
+                      {[1, 2, 3, 4, 5].map((s) => (
+                        <Star key={s} className="w-4 h-4 sm:w-[22px] sm:h-[22px] text-[#FF6A00] hover:drop-shadow-[0_0_4px_rgba(255,106,0,0.5)] transition-all duration-300" />
+                      ))}
+                    </div>
+                    <div className="flex flex-col leading-tight">
+                      <span className="text-[13px] sm:text-[18px] font-extrabold text-[#1E1E1E]">
+                        Trusted by 500+ Brands
+                      </span>
+                      <span className="text-[11px] sm:text-[15px] font-medium text-[#777777] mt-0.5">
+                        Across the globe
+                      </span>
+                    </div>
                   </div>
                 </div>
               </motion.div>
