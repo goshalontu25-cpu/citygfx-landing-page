@@ -83,50 +83,50 @@ export const portfolioItems = [
   {
     id: 6,
     tab: "talking-head",
-    title: "Naturals By Rakhi - Premium Hair Oil | AI Video Commercial by CityGfx",
+    title: "Talking Head Ad 1 | CityGfx",
     categoryId: "social-media",
     categoryLabel: "SOCIAL MEDIA",
-    duration: "25 Sec",
+    duration: "Short",
     badgeColor: "bg-[#EC4899]",
     playColor: "text-[#EC4899]",
-    image: "https://img.youtube.com/vi/Di4xrEBxFow/maxresdefault.jpg",
-    videoId: "Di4xrEBxFow"
+    image: "https://img.youtube.com/vi/lVi2j3_w1tE/hqdefault.jpg",
+    videoId: "lVi2j3_w1tE"
   },
   {
     id: 7,
     tab: "talking-head",
-    title: "The Perfect Eid Gift 🎁 | A Heartwarming AI Commercial for Qpick",
+    title: "Talking Head Ad 2 | CityGfx",
     categoryId: "promotional",
     categoryLabel: "PROMOTIONAL",
-    duration: "55 Sec",
+    duration: "Short",
     badgeColor: "bg-[#7C3AED]",
     playColor: "text-[#7C3AED]",
-    image: "https://img.youtube.com/vi/gWcyHMtQS-0/maxresdefault.jpg",
-    videoId: "gWcyHMtQS-0"
+    image: "https://img.youtube.com/vi/lDpSMh33-T4/hqdefault.jpg",
+    videoId: "lDpSMh33-T4"
   },
   {
     id: 8,
     tab: "talking-head",
-    title: "ACI Water Pump - Eid Special AI Commercial | By CityGfx",
+    title: "Talking Head Ad 3 | CityGfx",
     categoryId: "explainer",
     categoryLabel: "EXPLAINER",
-    duration: "1:45 Min",
+    duration: "Short",
     badgeColor: "bg-[#3B82F6]",
     playColor: "text-[#3B82F6]",
-    image: "https://img.youtube.com/vi/7heyvnuMCQ8/maxresdefault.jpg",
-    videoId: "7heyvnuMCQ8"
+    image: "https://img.youtube.com/vi/lDpSMh33-T4/hqdefault.jpg",
+    videoId: "lDpSMh33-T4"
   },
   {
     id: 9,
     tab: "talking-head",
-    title: "Save Water This Holiday | ACI Water Pump AI Commercial by CityGfx",
+    title: "Talking Head Ad 4 | CityGfx",
     categoryId: "motion-graphics",
     categoryLabel: "MOTION GRAPHICS",
-    duration: "2:10 Min",
+    duration: "Short",
     badgeColor: "bg-[#F97316]",
     playColor: "text-[#F97316]",
-    image: "https://img.youtube.com/vi/t-08atw9xxo/maxresdefault.jpg",
-    videoId: "t-08atw9xxo"
+    image: "https://img.youtube.com/vi/2LT6nWkDHIU/hqdefault.jpg",
+    videoId: "2LT6nWkDHIU"
   }
 ]
 
