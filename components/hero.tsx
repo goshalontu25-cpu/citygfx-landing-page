@@ -112,11 +112,11 @@ export function Hero() {
                 <span>🚀 Top-Rated AI Video Ads & Commercial Studio</span>
               </div>
 
-              <h1 className="text-[36px] sm:text-[44px] md:text-[52px] lg:text-[64px] font-[800] tracking-[-0.02em] leading-[1.1] md:leading-[1.15]">
-                <span className="block text-text-dark lg:whitespace-nowrap">
+              <h1 className="text-[5.5vw] sm:text-[44px] md:text-[52px] lg:text-[64px] font-[800] tracking-[-0.02em] leading-[1.1] md:leading-[1.15]">
+                <span className="block text-text-dark whitespace-nowrap">
                   Stop the Scroll. <span className="text-[#FF6B2B]">Start the Sales.</span>
                 </span>
-                <span className="block text-text-dark mt-1">Next-Gen Video Ads.</span>
+                <span className="block text-text-dark mt-1 whitespace-nowrap sm:whitespace-normal">Next-Gen Video Ads.</span>
               </h1>
               
               <p className="text-[14px] sm:text-[16px] md:text-[18px] text-text-soft font-medium w-full max-w-[1000px] px-2 sm:px-4 mx-auto leading-relaxed">
