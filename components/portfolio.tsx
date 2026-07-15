@@ -105,8 +105,8 @@ export const portfolioItems = [
     duration: "1:45 Min",
     badgeColor: "bg-[#3B82F6]",
     playColor: "text-[#3B82F6]",
-    image: "https://img.youtube.com/vi/0JEu6DStnU4/maxresdefault.jpg",
-    videoId: "0JEu6DStnU4"
+    image: "https://img.youtube.com/vi/7heyvnuMCQ8/maxresdefault.jpg",
+    videoId: "7heyvnuMCQ8"
   },
   {
     id: 9,
