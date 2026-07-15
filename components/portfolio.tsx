@@ -128,14 +128,38 @@ export const portfolioItems = [
     playColor: "text-[#F97316]",
     image: "https://img.youtube.com/vi/2LT6nWkDHIU/hqdefault.jpg",
     videoId: "2LT6nWkDHIU"
+  },
+  {
+    id: 10,
+    tab: "commercials",
+    title: "Save Water This Holiday | ACI Water Pump AI Commercial by CityGfx",
+    categoryId: "motion-graphics",
+    categoryLabel: "MOTION GRAPHICS",
+    duration: "2:10 Min",
+    badgeColor: "bg-[#F97316]",
+    playColor: "text-[#F97316]",
+    image: "https://img.youtube.com/vi/t-08atw9xxo/maxresdefault.jpg",
+    videoId: "t-08atw9xxo"
+  },
+  {
+    id: 11,
+    tab: "commercials",
+    title: "ACI Water Pump - Eid Special AI Commercial | By CityGfx",
+    categoryId: "explainer",
+    categoryLabel: "EXPLAINER",
+    duration: "1:45 Min",
+    badgeColor: "bg-[#3B82F6]",
+    playColor: "text-[#3B82F6]",
+    image: "https://img.youtube.com/vi/7heyvnuMCQ8/maxresdefault.jpg",
+    videoId: "7heyvnuMCQ8"
   }
 ]
 
 export function Portfolio() {
   const [activeVideo, setActiveVideo] = useState<string | null>(null)
-  const [activeTab, setActiveTab] = useState<"commercials" | "talking-head">("commercials")
+  const [activeTab, setActiveTab] = useState<"commercials" | "talking-head" | "all">("commercials")
 
-  const activeItems = portfolioItems.filter(item => item.tab === activeTab)
+  const activeItems = activeTab === "all" ? portfolioItems : portfolioItems.filter(item => item.tab === activeTab)
 
   return (
     <section className="pt-8 md:pt-12 pb-8 md:pb-12 bg-secondary" id="portfolio">
@@ -242,14 +266,14 @@ export function Portfolio() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-10 md:mt-12 flex justify-center">
-          <Link href="/portfolio">
-            <Button variant="outline" className="h-12 px-8 rounded-full border-[#FF6B2B] text-[#FF6B2B] hover:bg-[#FF6B2B]/5 font-semibold">
+        {activeTab !== "all" && (
+          <div className="mt-10 md:mt-12 flex justify-center">
+            <Button onClick={() => setActiveTab("all")} variant="outline" className="h-12 px-8 rounded-full border-[#FF6B2B] text-[#FF6B2B] hover:bg-[#FF6B2B]/5 font-semibold">
               <Grid2X2 className="w-4 h-4 mr-2" />
               View All Projects
             </Button>
-          </Link>
-        </div>
+          </div>
+        )}
 
       </div>
 
