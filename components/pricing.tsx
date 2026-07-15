@@ -73,7 +73,7 @@ export const ovcPackages = [
   },
   {
     id: "platinum",
-    title: "Platinum / Premium",
+    title: "Premium",
     videos: "৩টি ভিডিওর কম্বো। প্রতিটি সর্বোচ্চ ৬০ সেকেন্ড ডিউরেশন।",
     icon: Crown,
     iconBg: "bg-green-50",
@@ -145,7 +145,7 @@ export const talkingAdPackages = [
   },
   {
     id: "platinum",
-    title: "Platinum / Premium",
+    title: "Premium",
     videos: "৩টি ভিডিওর কম্বো। ডিউরেশন সর্বোচ্চ ৩০ সেকেন্ড।",
     icon: Crown,
     iconBg: "bg-green-50",
