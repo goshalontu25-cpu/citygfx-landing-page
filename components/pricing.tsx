@@ -261,12 +261,12 @@ export function Pricing() {
           </p>
           
           {/* Toggle Switch */}
-          <div className="inline-flex items-center p-1.5 bg-white border border-border rounded-full shadow-sm max-w-full overflow-x-auto overflow-y-hidden">
+          <div className="inline-flex items-center p-1.5 bg-white border border-border rounded-full max-w-full overflow-x-auto overflow-y-hidden">
             <button
               onClick={() => setActiveCategory("ovc")}
               className={`px-5 py-2.5 sm:px-6 sm:py-2 rounded-full text-[13px] sm:text-[14px] font-bold flex items-center gap-2 transition-all whitespace-nowrap ${
                 activeCategory === "ovc"
-                  ? "bg-primary text-white shadow-sm"
+                  ? "bg-primary text-white"
                   : "text-text-mid hover:text-text-dark"
               }`}
             >
@@ -277,7 +277,7 @@ export function Pricing() {
               onClick={() => setActiveCategory("talking-ad")}
               className={`px-5 py-2.5 sm:px-6 sm:py-2 rounded-full text-[13px] sm:text-[14px] font-bold flex items-center gap-2 transition-all whitespace-nowrap ${
                 activeCategory === "talking-ad"
-                  ? "bg-primary text-white shadow-sm"
+                  ? "bg-primary text-white"
                   : "text-text-mid hover:text-text-dark"
               }`}
             >

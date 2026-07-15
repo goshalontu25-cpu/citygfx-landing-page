@@ -14,7 +14,9 @@ import {
   PiCornersOutBold as Maximize2, 
   PiClockFill as Clock, 
   PiSquaresFourFill as Grid2X2,
-  PiXBold as X
+  PiXBold as X,
+  PiVideoCameraFill as Video,
+  PiMicrophoneFill as Microphone
 } from "react-icons/pi"
 import * as motion from "framer-motion/client"
 import { AnimatePresence } from "framer-motion"
@@ -32,6 +34,7 @@ export const filterCategories = [
 export const portfolioItems = [
   {
     id: 1,
+    tab: "commercials",
     title: "ZUQO Verona | CityGfx",
     categoryId: "promotional",
     categoryLabel: "PROMOTIONAL",
@@ -43,6 +46,7 @@ export const portfolioItems = [
   },
   {
     id: 2,
+    tab: "commercials",
     title: "RIDE ON Pro Ride Carbon Cleaner | CityGfx",
     categoryId: "explainer",
     categoryLabel: "EXPLAINER",
@@ -54,6 +58,7 @@ export const portfolioItems = [
   },
   {
     id: 3,
+    tab: "commercials",
     title: "Babuland Eid Campaign | AI Ad by CityGfx",
     categoryId: "social-media",
     categoryLabel: "SOCIAL MEDIA",
@@ -63,9 +68,9 @@ export const portfolioItems = [
     image: "https://img.youtube.com/vi/4qsg1fCt4pE/maxresdefault.jpg",
     videoId: "4qsg1fCt4pE"
   },
-
   {
     id: 5,
+    tab: "commercials",
     title: "Own a Modern Car Garage in Dhaka! | Zantrik AI Ad by CityGfx",
     categoryId: "education",
     categoryLabel: "EDUCATION",
@@ -77,6 +82,7 @@ export const portfolioItems = [
   },
   {
     id: 6,
+    tab: "talking-head",
     title: "Naturals By Rakhi - Premium Hair Oil | AI Video Commercial by CityGfx",
     categoryId: "social-media",
     categoryLabel: "SOCIAL MEDIA",
@@ -88,6 +94,7 @@ export const portfolioItems = [
   },
   {
     id: 7,
+    tab: "talking-head",
     title: "The Perfect Eid Gift 🎁 | A Heartwarming AI Commercial for Qpick",
     categoryId: "promotional",
     categoryLabel: "PROMOTIONAL",
@@ -99,6 +106,7 @@ export const portfolioItems = [
   },
   {
     id: 8,
+    tab: "talking-head",
     title: "ACI Water Pump - Eid Special AI Commercial | By CityGfx",
     categoryId: "explainer",
     categoryLabel: "EXPLAINER",
@@ -110,6 +118,7 @@ export const portfolioItems = [
   },
   {
     id: 9,
+    tab: "talking-head",
     title: "Save Water This Holiday | ACI Water Pump AI Commercial by CityGfx",
     categoryId: "motion-graphics",
     categoryLabel: "MOTION GRAPHICS",
@@ -123,6 +132,9 @@ export const portfolioItems = [
 
 export function Portfolio() {
   const [activeVideo, setActiveVideo] = useState<string | null>(null)
+  const [activeTab, setActiveTab] = useState<"commercials" | "talking-head">("commercials")
+
+  const activeItems = portfolioItems.filter(item => item.tab === activeTab)
 
   return (
     <section className="pt-8 md:pt-12 pb-8 md:pb-12 bg-secondary" id="portfolio">
@@ -148,11 +160,37 @@ export function Portfolio() {
           <p className="text-[16px] text-text-soft font-medium max-w-[600px] mb-8">
             A curated selection of winning creatives that delivered record-breaking ROI for our clients.
           </p>
+
+          {/* Toggle Switch */}
+          <div className="inline-flex items-center p-1.5 bg-white border border-border rounded-full max-w-full overflow-x-auto overflow-y-hidden">
+            <button
+              onClick={() => setActiveTab("commercials")}
+              className={`px-5 py-2.5 sm:px-6 sm:py-2 rounded-full text-[13px] sm:text-[14px] font-bold flex items-center gap-2 transition-all whitespace-nowrap ${
+                activeTab === "commercials"
+                  ? "bg-[#FF6A00] text-white"
+                  : "text-gray-500 hover:text-gray-900"
+              }`}
+            >
+              <Video className="w-4 h-4" />
+              Commercials
+            </button>
+            <button
+              onClick={() => setActiveTab("talking-head")}
+              className={`px-5 py-2.5 sm:px-6 sm:py-2 rounded-full text-[13px] sm:text-[14px] font-bold flex items-center gap-2 transition-all whitespace-nowrap ${
+                activeTab === "talking-head"
+                  ? "bg-[#FF6A00] text-white"
+                  : "text-gray-500 hover:text-gray-900"
+              }`}
+            >
+              <Microphone className="w-4 h-4" />
+              Talking Head
+            </button>
+          </div>
         </motion.div>
 
         {/* Video Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {portfolioItems.map((item, idx) => (
+          {activeItems.map((item, idx) => (
             <motion.div
               key={item.id}
               layout
