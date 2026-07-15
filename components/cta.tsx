@@ -15,7 +15,7 @@ import { Button } from "./ui/button"
 
 export function CTA() {
   return (
-    <section className="pt-12 md:pt-16 pb-0 bg-transparent relative z-20 -mb-24" id="cta">
+    <section className="pt-8 md:pt-12 pb-0 bg-transparent relative z-20 -mb-24" id="cta">
       <div className="container mx-auto max-w-[1280px] px-4 md:px-6">
         
         <div className="relative bg-[#FFF6F0] rounded-[40px] overflow-hidden border border-orange-100/50 shadow-sm">

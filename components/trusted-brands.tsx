@@ -41,7 +41,7 @@ const LogoSet = () => (
 
 export function TrustedBrands() {
   return (
-    <section className="pt-6 md:pt-10 pb-10 md:pb-16 border-b border-border bg-white overflow-hidden relative">
+    <section className="pt-6 md:pt-8 pb-8 md:pb-12 border-b border-border bg-white overflow-hidden relative">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

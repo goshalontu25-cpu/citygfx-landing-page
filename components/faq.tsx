@@ -95,7 +95,7 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section className="py-12 md:py-16 bg-secondary relative overflow-hidden" id="faq">
+    <section className="py-8 md:py-12 bg-secondary relative overflow-hidden" id="faq">
       <div className="container mx-auto max-w-[1280px] px-4 md:px-6">
         
         {/* Header Section */}

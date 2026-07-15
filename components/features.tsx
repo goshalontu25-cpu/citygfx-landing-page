@@ -55,7 +55,7 @@ const features = [
 
 export function Features() {
   return (
-    <section className="pt-12 md:pt-16 pb-12 md:pb-16 bg-secondary" id="services">
+    <section className="pt-8 md:pt-12 pb-8 md:pb-12 bg-secondary" id="services">
       <div className="container mx-auto max-w-[1280px] px-4 md:px-6">
         
         {/* Header Section */}

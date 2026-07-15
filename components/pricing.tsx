@@ -237,7 +237,7 @@ export function Pricing() {
   const activePackages = activeCategory === "ovc" ? ovcPackages : talkingAdPackages
 
   return (
-    <section className="pt-12 md:pt-16 pb-12 md:pb-16 bg-white" id="pricing">
+    <section className="pt-8 md:pt-12 pb-8 md:pb-12 bg-white" id="pricing">
       <div className="container mx-auto max-w-[1280px] px-4 md:px-6">
         
         {/* Header Section */}
