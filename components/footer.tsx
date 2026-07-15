@@ -13,7 +13,7 @@ import * as motion from "framer-motion/client"
 
 export function Footer() {
   return (
-    <footer className="bg-[#111111] text-white pt-32 md:pt-40 pb-20 md:pb-6 mt-0 rounded-t-[40px] px-4 md:px-6 relative z-10">
+    <footer className="bg-[#111111] text-white pt-28 md:pt-32 pb-20 md:pb-6 mt-0 rounded-t-[40px] px-4 md:px-6 relative z-10">
       <div className="container mx-auto max-w-[1280px]">
         
         {/* Top Section */}
