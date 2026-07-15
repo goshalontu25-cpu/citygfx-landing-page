@@ -397,10 +397,10 @@ export function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-16 md:mt-20 w-full bg-white rounded-2xl border border-border p-6 md:p-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-border"
+          className="mt-16 md:mt-20 w-full bg-white rounded-2xl border border-border p-6 md:p-8 shadow-sm flex flex-col md:flex-row items-center justify-between divide-y md:divide-y-0 md:divide-x divide-border"
         >
           {trustIndicators.map((item, idx) => (
-            <div key={idx} className="flex items-center gap-4 w-full md:w-1/4 md:justify-center pt-4 md:pt-0 first:pt-0 md:px-4">
+            <div key={idx} className="flex items-center gap-4 w-full md:w-1/4 md:justify-center py-5 md:py-0 first:pt-0 last:pb-0 md:px-4 md:first:pl-0 md:last:pr-0">
               <div className={`w-12 h-12 shrink-0 rounded-full ${item.bgClass} flex items-center justify-center ${item.colorClass}`}>
                 <item.icon className="w-5 h-5" />
               </div>
