@@ -22,7 +22,16 @@ const faqs = [
   },
   {
     question: "Who is this service for?",
-    answer: "We partner with ambitious E-commerce brands, SaaS companies, and digital agencies who want high-converting video ads to drastically improve their ROAS (Return on Ad Spend) and scale their paid campaigns."
+    answer: (
+      <div className="flex flex-col gap-3">
+        <p>This service is perfectly designed for:</p>
+        <ul className="list-disc pl-5 flex flex-col gap-2">
+          <li><strong>CEOs, Founders & Public Figures</strong> who want a structured, premium social media presence without managing it themselves.</li>
+          <li><strong>Startups & SMEs</strong> that have a limited monthly marketing budget but still expect high-quality execution and consistent results.</li>
+          <li><strong>Restaurants, E-commerce & Tech Companies</strong> that need strong social media marketing but don't have access to reliable, high-quality execution.</li>
+        </ul>
+      </div>
+    )
   },
   {
     question: "How long does delivery take?",
