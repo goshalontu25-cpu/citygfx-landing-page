@@ -42,7 +42,13 @@ const LogoSet = () => (
 export function TrustedBrands() {
   return (
     <section className="pt-6 md:pt-10 pb-10 md:pb-16 border-b border-border bg-white overflow-hidden relative">
-      <div className="container mx-auto px-4 md:px-6 mb-10 md:mb-12 flex flex-col items-center">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="container mx-auto px-4 md:px-6 mb-10 md:mb-12 flex flex-col items-center"
+      >
         <div className="inline-flex items-center gap-2 bg-orange-50 text-[#FF6B2B] px-4 py-1.5 rounded-full text-[12px] font-bold tracking-widest uppercase mb-6 shadow-sm">
           <ShieldCheck className="w-4 h-4" />
           TRUSTED PARTNERS
@@ -54,7 +60,7 @@ export function TrustedBrands() {
         <p className="text-[16px] text-text-soft font-medium text-center max-w-[600px]">
           Join 500+ forward-thinking brands who trust our creatives to scale their campaigns.
         </p>
-      </div>
+      </motion.div>
 
       <div className="relative w-full overflow-hidden flex items-center">
         {/* Gradient masks for seamless edges */}

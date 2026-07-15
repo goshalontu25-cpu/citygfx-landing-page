@@ -157,9 +157,10 @@ export function Portfolio() {
               key={item.id}
               layout
               initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
               exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.4 }}
+              transition={{ duration: 0.4, delay: (idx % 2) * 0.1 }}
               onClick={() => setActiveVideo(item.videoId)}
               className="group relative aspect-[16/10] rounded-2xl overflow-hidden cursor-pointer"
             >

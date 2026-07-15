@@ -9,6 +9,7 @@ import {
   PiMapPinFill as MapPin, 
   PiHeartFill as Heart 
 } from "react-icons/pi"
+import * as motion from "framer-motion/client"
 
 export function Footer() {
   return (
@@ -16,7 +17,13 @@ export function Footer() {
       <div className="container mx-auto max-w-[1280px]">
         
         {/* Top Section */}
-        <div className="flex flex-col items-center text-center mb-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col items-center text-center mb-12"
+        >
           
           {/* Brand Info */}
           <Link href="https://www.citygfx.agency" className="mb-6 inline-block w-[180px]">
@@ -57,7 +64,7 @@ export function Footer() {
             ))}
           </div>
 
-        </div>
+        </motion.div>
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex items-center justify-center">
