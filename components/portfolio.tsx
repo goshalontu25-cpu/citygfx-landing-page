@@ -157,9 +157,9 @@ export const portfolioItems = [
 
 export function Portfolio() {
   const [activeVideo, setActiveVideo] = useState<string | null>(null)
-  const [activeTab, setActiveTab] = useState<"commercials" | "talking-head" | "all">("commercials")
+  const [activeTab, setActiveTab] = useState<"commercials" | "talking-head">("commercials")
 
-  const activeItems = activeTab === "all" ? portfolioItems : portfolioItems.filter(item => item.tab === activeTab)
+  const activeItems = portfolioItems.filter(item => item.tab === activeTab)
 
   return (
     <section className="pt-8 md:pt-12 pb-8 md:pb-12 bg-secondary" id="portfolio">
@@ -266,14 +266,14 @@ export function Portfolio() {
         </div>
 
         {/* Bottom CTA */}
-        {activeTab !== "all" && (
-          <div className="mt-10 md:mt-12 flex justify-center">
-            <Button onClick={() => setActiveTab("all")} variant="outline" className="h-12 px-8 rounded-full border-[#FF6B2B] text-[#FF6B2B] hover:bg-[#FF6B2B]/5 font-semibold">
+        <div className="mt-10 md:mt-12 flex justify-center">
+          <Link href="/portfolio">
+            <Button variant="outline" className="h-12 px-8 rounded-full border-[#FF6B2B] text-[#FF6B2B] hover:bg-[#FF6B2B]/5 font-semibold">
               <Grid2X2 className="w-4 h-4 mr-2" />
               View All Projects
             </Button>
-          </div>
-        )}
+          </Link>
+        </div>
 
       </div>
 
