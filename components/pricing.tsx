@@ -23,7 +23,7 @@ import {
 } from "react-icons/pi"
 import * as motion from "framer-motion/client"
 
-const ovcPackages = [
+export const ovcPackages = [
   {
     id: "silver",
     title: "Silver (১টি OVC)",
@@ -95,7 +95,7 @@ const ovcPackages = [
   }
 ]
 
-const talkingAdPackages = [
+export const talkingAdPackages = [
   {
     id: "silver",
     title: "Silver (১টি ভিডিও)",
@@ -167,7 +167,7 @@ const talkingAdPackages = [
   }
 ]
 
-const addons = [
+export const addons = [
   {
     icon: Video,
     title: "4K রেজোলিউশন আপগ্রেড",
@@ -341,7 +341,7 @@ export function Pricing() {
                     <span className="text-[15px] text-text-soft font-medium line-through">৳ {pkg.originalPrice}</span>
                   </div>
                   
-                  <Link href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="block w-full">
+                  <Link href={`/checkout?pkg=${pkg.id}&type=${activeCategory}`} className="block w-full">
                     <Button
                       variant={pkg.buttonVariant as "default" | "outline"}
                       className={`w-full h-12 text-[15px] rounded-full border-2 ${pkg.buttonClass}`}
@@ -356,40 +356,7 @@ export function Pricing() {
           })}
         </div>
 
-        {/* Add-ons Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-20 md:mt-24"
-        >
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 bg-orange-50 text-[#FF6B2B] px-4 py-1.5 rounded-full text-[12px] font-bold tracking-widest uppercase mb-4">
-              Add-ons
-            </div>
-            <h3 className="text-[24px] sm:text-[32px] font-bold text-text-dark mb-4">
-              ➕ এক্সট্রা অ্যাড-অন অপশন
-            </h3>
-            <p className="text-text-soft text-[15px] sm:text-[16px] max-w-[700px] mx-auto px-4">
-              চেকআউট পেজ বা প্যাকেজের সাথে আপনার প্রয়োজনমতো এই অপশনগুলো এক্সট্রা বাজেটে যুক্ত করে নিতে পারবেন:
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {addons.map((addon, idx) => (
-              <GlassCard key={idx} className="p-6 bg-white border border-border shadow-[0_8px_30px_rgba(0,0,0,0.04)] flex flex-col items-center text-center hover:border-[#FF6B2B]/30 hover:shadow-lg transition-all group cursor-pointer">
-                <div className="w-14 h-14 rounded-full bg-orange-50 text-[#FF6B2B] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                  <addon.icon className="w-7 h-7" />
-                </div>
-                <h4 className="text-[15px] font-bold text-text-dark mb-3">{addon.title}</h4>
-                <p className="text-[13px] text-text-soft leading-relaxed font-medium">
-                  {addon.desc}
-                </p>
-              </GlassCard>
-            ))}
-          </div>
-        </motion.div>
+
 
         {/* Trust Indicators Bar */}
         <motion.div
