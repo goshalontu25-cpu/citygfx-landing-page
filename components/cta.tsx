@@ -41,7 +41,7 @@ export function CTA() {
               </p>
 
               <div className="flex flex-row items-center justify-center gap-3 sm:gap-4 mb-10 w-full">
-                <Link href="https://wa.me/8801617563535" target="_blank" rel="noopener noreferrer" className="flex-1 sm:flex-none">
+                <Link href="#pricing" className="flex-1 sm:flex-none">
                   <Button className="w-full sm:w-auto h-12 sm:h-14 px-3 sm:px-8 rounded-full bg-primary text-white hover:bg-primary-mid hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,106,42,0.3)] transition-all duration-300 text-[12px] sm:text-[16px] group border border-transparent whitespace-nowrap">
                     <Phone className="w-3 h-3 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
                     Start Your Project

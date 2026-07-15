@@ -171,7 +171,7 @@ export function Hero() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="flex flex-row items-center justify-center gap-2 sm:gap-6 w-full max-w-[700px] px-2 sm:px-0"
               >
-                <Link href="https://wa.me/8801617563535" target="_blank" rel="noopener noreferrer" className="w-full flex-1">
+                <Link href="#pricing" className="w-full flex-1">
                   <button className="w-full flex items-center justify-center gap-1.5 sm:gap-3 h-14 sm:h-[80px] px-2 sm:px-12 text-[12px] sm:text-[18px] font-bold text-white rounded-full bg-gradient-to-r from-[#FF6A00] to-[#FF7E2E] shadow-[0_12px_24px_-8px_rgba(255,106,0,0.6)] sm:shadow-[0_20px_40px_-10px_rgba(255,106,0,0.6)] hover:-translate-y-1 hover:shadow-[0_24px_48px_-10px_rgba(255,106,0,0.7)] transition-all duration-300 group">
                     <PiPaperPlaneTiltFill className="w-4 h-4 sm:w-6 h-6" />
                     Start Your Project
