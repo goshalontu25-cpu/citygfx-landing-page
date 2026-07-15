@@ -33,7 +33,7 @@ export function TrustedBrands() {
         transition={{ duration: 0.5 }}
         className="container mx-auto px-4 md:px-6 flex flex-col items-center text-center"
       >
-        <div className="inline-flex items-center gap-2 bg-[#FEF0E6] text-[#F05A1B] px-5 py-2 rounded-full text-[13px] font-bold tracking-widest uppercase mb-6 shadow-sm">
+        <div className="inline-flex items-center gap-2 bg-[#FEF0E6] text-[#F05A1B] px-5 py-2 rounded-full text-[13px] font-bold tracking-widest uppercase mb-6">
           <ShieldCheck className="w-4 h-4" />
           TRUSTED PARTNERS
         </div>
