@@ -66,7 +66,7 @@ export const portfolioItems = [
 
   {
     id: 5,
-    title: "Naturals By Rakhi - Premium Hair Oil | AI Video Commercial by CityGfx",
+    title: "Own a Modern Car Garage in Dhaka! | Zantrik AI Ad by CityGfx",
     categoryId: "education",
     categoryLabel: "EDUCATION",
     duration: "1:08 Min",
