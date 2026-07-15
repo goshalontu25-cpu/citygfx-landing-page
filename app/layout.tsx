@@ -11,16 +11,16 @@ export const metadata: Metadata = {
   title: "CityGfx | High-converting video ads",
   description: "High-converting video ads that drive engagement, leads, and sales. Professional AI-assisted video ad agency for e-commerce, local businesses, and digital marketers.",
   icons: {
-    icon: "https://res.cloudinary.com/dweciloal/image/upload/v1784112538/Favicon_i0jzvz.png",
+    icon: "https://res.cloudinary.com/dweciloal/image/upload/v1784120640/CG_favicon_white_eic9ba.png",
   },
   openGraph: {
     title: "CityGfx | High-converting video ads",
     description: "High-converting video ads that drive engagement, leads, and sales.",
-    images: ["https://res.cloudinary.com/dweciloal/image/upload/v1784112538/Favicon_i0jzvz.png"],
+    images: ["https://res.cloudinary.com/dweciloal/image/upload/v1784120640/CG_favicon_white_eic9ba.png"],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://res.cloudinary.com/dweciloal/image/upload/v1784112538/Favicon_i0jzvz.png"],
+    images: ["https://res.cloudinary.com/dweciloal/image/upload/v1784120640/CG_favicon_white_eic9ba.png"],
   },
 };
 
