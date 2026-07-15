@@ -47,7 +47,7 @@ const features = [
 
 export function Features() {
   return (
-    <section className="pt-16 md:pt-24 pb-16 md:pb-24 bg-[#FCFAF8]" id="services">
+    <section className="pt-16 md:pt-24 pb-16 md:pb-24 bg-white" id="services">
       <div className="container mx-auto max-w-[1000px] px-4 md:px-6">
         
         {/* Header Section */}
