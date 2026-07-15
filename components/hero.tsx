@@ -59,7 +59,10 @@ const HeroVideoBox = ({ setIsVideoOpen }: { setIsVideoOpen: (v: boolean) => void
       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
       
       <div className="absolute inset-0 flex items-center justify-center">
-        <PlayCircle className="w-24 h-24 sm:w-32 sm:h-32 text-primary drop-shadow-2xl group-hover:scale-110 transition-transform" />
+        <div className="relative flex items-center justify-center group-hover:scale-110 transition-transform">
+          <div className="absolute w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full" />
+          <PlayCircle className="relative z-10 w-24 h-24 sm:w-32 sm:h-32 text-primary drop-shadow-2xl" />
+        </div>
       </div>
     </div>
 
