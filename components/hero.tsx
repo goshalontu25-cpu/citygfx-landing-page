@@ -138,12 +138,14 @@ export function Hero() {
 
               <h1 className="text-[48px] sm:text-[64px] md:text-[80px] lg:text-[96px] font-black tracking-[-0.03em] leading-[1.05] text-[#111111] mb-6">
                 <span className="block">Stop the Scroll.</span>
-                <span className="block bg-gradient-to-r from-[#FF8A00] to-[#FF4500] bg-clip-text text-transparent relative inline-block">
-                  Start the Sales.
-                  {/* Underline SVG */}
-                  <svg className="absolute w-[105%] -bottom-[8%] left-[-2%] text-[#FF5A00] h-4 sm:h-6" viewBox="0 0 300 15" fill="none" preserveAspectRatio="none">
-                    <path d="M2 13 C 50 2, 150 -2, 298 10" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
-                  </svg>
+                <span className="block bg-gradient-to-r from-[#FF8A00] to-[#FF4500] bg-clip-text text-transparent">
+                  Start the <span className="relative inline-block">
+                    Sales.
+                    {/* Underline SVG */}
+                    <svg className="absolute w-[110%] -bottom-[8%] left-[-5%] text-[#FF5A00] h-4 sm:h-6" viewBox="0 0 300 15" fill="none" preserveAspectRatio="none">
+                      <path d="M2 13 C 50 2, 150 -2, 298 10" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+                    </svg>
+                  </span>
                 </span>
               </h1>
               
