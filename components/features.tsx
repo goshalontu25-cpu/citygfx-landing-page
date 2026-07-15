@@ -81,7 +81,7 @@ export function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="group relative bg-white rounded-[24px] sm:rounded-[32px] p-6 sm:p-8 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-10 overflow-hidden cursor-pointer hover:-translate-y-1"
+              className="group relative bg-white rounded-[24px] sm:rounded-[32px] p-5 sm:p-8 md:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-row items-center gap-4 sm:gap-10 overflow-hidden cursor-pointer hover:-translate-y-1"
             >
               {/* Left Color Strip */}
               <div 
@@ -91,37 +91,37 @@ export function Features() {
               
               {/* Icon Container */}
               <div 
-                className="shrink-0 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
+                className="shrink-0 w-[60px] h-[60px] sm:w-[100px] sm:h-[100px] rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
                 style={{ backgroundColor: feature.bgLight, color: feature.themeColor }}
               >
-                <feature.icon className="w-10 h-10 sm:w-12 sm:h-12" />
+                <feature.icon className="w-7 h-7 sm:w-12 sm:h-12" />
               </div>
 
               {/* Text Content */}
-              <div className="flex-1 flex flex-col">
+              <div className="flex-1 flex flex-col min-w-0">
                 {/* Number & Line */}
-                <div className="flex items-center gap-4 mb-2 sm:mb-3">
-                  <span className="text-[16px] sm:text-[18px] font-bold" style={{ color: feature.themeColor }}>
+                <div className="flex items-center gap-3 sm:gap-4 mb-1 sm:mb-3">
+                  <span className="text-[13px] sm:text-[18px] font-bold" style={{ color: feature.themeColor }}>
                     {feature.num}
                   </span>
-                  <div className="h-[2px] w-8 sm:w-10 rounded-full opacity-30" style={{ backgroundColor: feature.themeColor }} />
+                  <div className="h-[2px] w-6 sm:w-10 rounded-full opacity-30" style={{ backgroundColor: feature.themeColor }} />
                 </div>
                 
-                <h3 className="text-[22px] sm:text-[28px] font-bold text-[#111111] mb-2 sm:mb-3 group-hover:text-[#FF6A00] transition-colors duration-300">
+                <h3 className="text-[17px] sm:text-[28px] font-bold text-[#111111] mb-1 sm:mb-3 group-hover:text-[#FF6A00] transition-colors duration-300 truncate sm:whitespace-normal">
                   {feature.title}
                 </h3>
                 
-                <p className="text-[15px] sm:text-[16px] text-gray-500 font-medium leading-relaxed max-w-[500px]">
+                <p className="text-[12px] sm:text-[16px] text-gray-500 font-medium leading-relaxed max-w-[500px] line-clamp-2 sm:line-clamp-none">
                   {feature.description}
                 </p>
               </div>
 
               {/* Right Arrow Button */}
               <div 
-                className="shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110 mt-4 sm:mt-0"
+                className="shrink-0 w-10 h-10 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110"
                 style={{ backgroundColor: feature.bgLight, color: feature.themeColor }}
               >
-                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight className="w-4 h-4 sm:w-6 sm:h-6 transition-transform duration-300 group-hover:translate-x-1" />
               </div>
             </motion.div>
           ))}
