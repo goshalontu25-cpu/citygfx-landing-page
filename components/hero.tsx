@@ -131,17 +131,17 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto"
+              className="flex flex-row items-center justify-center gap-2 sm:gap-4 w-full sm:w-auto px-2 sm:px-0"
             >
-              <Link href="https://wa.me/8801617563535" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <Button className="w-full sm:w-auto h-14 px-8 text-[16px] rounded-full shadow-lg shadow-[#FF6B2B]/20">
-                  <MessageCircle className="mr-2 w-5 h-5" />
+              <Link href="https://wa.me/8801617563535" target="_blank" rel="noopener noreferrer" className="flex-1 sm:flex-none">
+                <Button className="w-full h-12 sm:h-14 px-2 sm:px-8 text-[13px] sm:text-[16px] rounded-full shadow-lg shadow-[#FF6B2B]/20 whitespace-nowrap">
+                  <MessageCircle className="mr-1 sm:mr-2 w-4 h-4 sm:w-5 sm:h-5" />
                   Start Your Project
                 </Button>
               </Link>
-              <Link href="#portfolio" className="w-full sm:w-auto">
-                <Button variant="outline" className="w-full sm:w-auto h-14 px-8 text-[16px] rounded-full border-border bg-white hover:border-[#FF6B2B] hover:text-[#FF6B2B]">
-                  <PlayCircle className="mr-2 w-5 h-5" />
+              <Link href="#portfolio" className="flex-1 sm:flex-none">
+                <Button variant="outline" className="w-full h-12 sm:h-14 px-2 sm:px-8 text-[13px] sm:text-[16px] rounded-full border-border bg-white hover:border-[#FF6B2B] hover:text-[#FF6B2B] whitespace-nowrap">
+                  <PlayCircle className="mr-1 sm:mr-2 w-4 h-4 sm:w-5 sm:h-5" />
                   Watch Our Work
                 </Button>
               </Link>
