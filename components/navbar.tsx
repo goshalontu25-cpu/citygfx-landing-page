@@ -65,7 +65,7 @@ export function Navbar() {
 
         {/* CTA */}
         <div className="block">
-          <Link href="https://wa.me/8801617563535" target="_blank" rel="noopener noreferrer">
+          <Link href="https://wa.me/8801617563535?text=Hi%20CityGfx%2C%20I%20would%20like%20to%20book%20a%20call%20to%20discuss%20my%20project." target="_blank" rel="noopener noreferrer">
             <Button className="h-9 px-3 text-[12px] md:h-10 md:px-4 md:text-[14px]">
               <PhoneCall className="w-3 h-3 mr-1 md:w-4 md:h-4 md:mr-2" />
               Book a Call
