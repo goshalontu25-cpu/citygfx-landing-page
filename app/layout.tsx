@@ -13,6 +13,15 @@ export const metadata: Metadata = {
   icons: {
     icon: "https://res.cloudinary.com/dweciloal/image/upload/v1784112538/Favicon_i0jzvz.png",
   },
+  openGraph: {
+    title: "CityGfx | High-converting video ads",
+    description: "High-converting video ads that drive engagement, leads, and sales.",
+    images: ["https://res.cloudinary.com/dweciloal/image/upload/v1784112538/Favicon_i0jzvz.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://res.cloudinary.com/dweciloal/image/upload/v1784112538/Favicon_i0jzvz.png"],
+  },
 };
 
 export default function RootLayout({
