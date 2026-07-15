@@ -369,8 +369,12 @@ export function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-16 md:mt-24 w-full"
+          className="mt-16 md:mt-24 w-full flex flex-col items-center"
         >
+          <div className="inline-flex items-center gap-2 bg-[#FEF0E6] text-[#F05A1B] px-5 py-2 rounded-full text-[13px] font-bold tracking-widest uppercase mb-8">
+            <ShieldCheck className="w-4 h-4" />
+            Our Guarantee
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 w-full">
             {trustIndicators.map((item, idx) => (
               <div 
