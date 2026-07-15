@@ -13,7 +13,7 @@ import * as motion from "framer-motion/client"
 
 export function Footer() {
   return (
-    <footer className="bg-[#111111] text-white pt-40 pb-28 md:pb-8 mt-0 rounded-t-[40px] px-4 md:px-6 relative z-10">
+    <footer className="bg-[#111111] text-white pt-32 md:pt-40 pb-20 md:pb-6 mt-0 rounded-t-[40px] px-4 md:px-6 relative z-10">
       <div className="container mx-auto max-w-[1280px]">
         
         {/* Top Section */}
@@ -22,11 +22,11 @@ export function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col items-center text-center mb-12"
+          className="flex flex-col items-center text-center mb-8"
         >
           
           {/* Brand Info */}
-          <Link href="https://www.citygfx.agency" className="mb-6 inline-block w-[180px]">
+          <Link href="https://www.citygfx.agency" className="mb-5 inline-block w-[160px]">
             <Image 
               src="https://res.cloudinary.com/dweciloal/image/upload/v1783445533/CG_Web_logo_u7wcsv.png" 
               alt="CityGfx" 
@@ -36,7 +36,7 @@ export function Footer() {
               priority
             />
           </Link>
-          <p className="text-[14px] text-gray-400 font-medium leading-relaxed mb-8 max-w-[280px]">
+          <p className="text-[14px] text-gray-400 font-medium leading-relaxed mb-6 max-w-[280px]">
             We don't just create videos; we build scalable engines for brand growth.
           </p>
           <div className="flex items-center justify-center gap-3">
@@ -67,8 +67,8 @@ export function Footer() {
         </motion.div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex items-center justify-center">
-          <p className="text-[13px] text-gray-400 font-medium">
+        <div className="pt-5 border-t border-white/10 flex items-center justify-center">
+          <p className="text-[12px] text-gray-500 font-medium">
             &copy; 2026 CityGfx. All rights reserved.
           </p>
         </div>
