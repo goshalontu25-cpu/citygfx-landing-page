@@ -26,10 +26,14 @@ function CheckoutContent() {
   
   const addAddonPrice = (desc: string) => {
     const bengaliDigits = {'০':0,'১':1,'২':2,'৩':3,'৪':4,'৫':5,'৬':6,'৭':7,'৮':8,'৯':9}
+    
+    // Only parse the price part before any parenthesis to avoid parsing numbers like '30' from '(প্রতি অতিরিক্ত ৩০ সেকেন্ডে)'
+    const pricePart = desc.split('(')[0]
+    
     let result = ''
-    for (let i = 0; i < desc.length; i++) {
-      if (bengaliDigits[desc[i] as keyof typeof bengaliDigits] !== undefined) {
-        result += bengaliDigits[desc[i] as keyof typeof bengaliDigits]
+    for (let i = 0; i < pricePart.length; i++) {
+      if (bengaliDigits[pricePart[i] as keyof typeof bengaliDigits] !== undefined) {
+        result += bengaliDigits[pricePart[i] as keyof typeof bengaliDigits]
       }
     }
     return parseInt(result) || 0
