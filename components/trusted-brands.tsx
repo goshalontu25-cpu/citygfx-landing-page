@@ -25,7 +25,7 @@ const logos = [
 
 export function TrustedBrands() {
   return (
-    <section className="pt-8 md:pt-16 pb-12 md:pb-20 border-b border-border bg-[#FCFAF8] overflow-hidden relative">
+    <section className="pt-8 md:pt-16 pb-12 md:pb-20 border-b border-border bg-white overflow-hidden relative">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -74,13 +74,7 @@ export function TrustedBrands() {
           </div>
         </div>
 
-        {/* Pagination Dots */}
-        <div className="flex items-center justify-center gap-2 mt-8">
-          <div className="w-2 h-2 rounded-full bg-[#FF5A00]"></div>
-          <div className="w-2 h-2 rounded-full bg-gray-200"></div>
-          <div className="w-2 h-2 rounded-full bg-gray-200"></div>
-          <div className="w-2 h-2 rounded-full bg-gray-200"></div>
-        </div>
+
 
       </motion.div>
     </section>
