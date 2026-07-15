@@ -161,8 +161,18 @@ export function Hero() {
               </p>
             </motion.div>
 
+            {/* Centered Video Thumbnail */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="w-full max-w-[800px] relative flex justify-center mt-8 lg:mt-12 mb-8 lg:mb-10 mx-auto"
+            >
+              <HeroVideoBox setIsVideoOpen={setIsVideoOpen} />
+            </motion.div>
+
             {/* Buttons and Trust Row Container */}
-            <div className="flex flex-col items-center w-full mt-10">
+            <div className="flex flex-col items-center w-full mt-2">
               
               {/* Buttons Row */}
               <motion.div
@@ -233,16 +243,6 @@ export function Hero() {
               </motion.div>
             </div>
           </div>
-
-          {/* Centered Video Thumbnail */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className="w-full max-w-[800px] relative flex justify-center mt-6 lg:mt-10 mx-auto"
-          >
-            <HeroVideoBox setIsVideoOpen={setIsVideoOpen} />
-          </motion.div>
         </div>
 
         {/* Bottom Stats Bar */}
