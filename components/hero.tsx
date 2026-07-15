@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "./ui/button"
@@ -21,8 +21,27 @@ import {
   PiSparkleFill
 } from "react-icons/pi"
 import * as motion from "framer-motion/client"
-import { AnimatePresence } from "framer-motion"
+import { AnimatePresence, useInView, animate } from "framer-motion"
 import { GlassCard } from "./ui/glass-card"
+
+const AnimatedNumber = ({ value, suffix = "", duration = 2 }: { value: number, suffix?: string, duration?: number }) => {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+  const [displayValue, setDisplayValue] = useState("0")
+
+  useEffect(() => {
+    if (isInView) {
+      const controls = animate(0, value, {
+        duration,
+        ease: "easeOut",
+        onUpdate: (v) => setDisplayValue(Math.round(v).toString())
+      })
+      return controls.stop
+    }
+  }, [isInView, value, duration])
+
+  return <span ref={ref}>{displayValue}{suffix}</span>
+}
 
 const HeroVideoBox = ({ setIsVideoOpen }: { setIsVideoOpen: (v: boolean) => void }) => (
   <>
@@ -202,7 +221,7 @@ export function Hero() {
               <Video className="w-6 h-6" />
             </div>
             <div className="text-center">
-              <div className="text-[24px] md:text-[28px] font-extrabold text-[#FF6B2B] leading-none mb-1">600+</div>
+              <div className="text-[24px] md:text-[28px] font-extrabold text-[#FF6B2B] leading-none mb-1"><AnimatedNumber value={600} suffix="+" /></div>
               <div className="text-[10px] sm:text-[12px] md:text-[14px] font-semibold text-text-soft whitespace-nowrap">Commercials & UGC</div>
             </div>
           </div>
@@ -212,7 +231,7 @@ export function Hero() {
               <Smile className="w-6 h-6" />
             </div>
             <div className="text-center">
-              <div className="text-[24px] md:text-[28px] font-extrabold text-[#FF6B2B] leading-none mb-1">98%</div>
+              <div className="text-[24px] md:text-[28px] font-extrabold text-[#FF6B2B] leading-none mb-1"><AnimatedNumber value={98} suffix="%" /></div>
               <div className="text-[10px] sm:text-[12px] md:text-[14px] font-semibold text-text-soft whitespace-nowrap">Client Satisfaction</div>
             </div>
           </div>
@@ -222,7 +241,7 @@ export function Hero() {
               <Star className="w-6 h-6" />
             </div>
             <div className="text-center">
-              <div className="text-[24px] md:text-[28px] font-extrabold text-[#FF6B2B] leading-none mb-1">8+</div>
+              <div className="text-[24px] md:text-[28px] font-extrabold text-[#FF6B2B] leading-none mb-1"><AnimatedNumber value={8} suffix="+" /></div>
               <div className="text-[10px] sm:text-[12px] md:text-[14px] font-semibold text-text-soft whitespace-nowrap">Years of Experience</div>
             </div>
           </div>
@@ -232,7 +251,7 @@ export function Hero() {
               <Headphones className="w-6 h-6" />
             </div>
             <div className="text-center">
-              <div className="text-[24px] md:text-[28px] font-extrabold text-[#FF6B2B] leading-none mb-1">24/7</div>
+              <div className="text-[24px] md:text-[28px] font-extrabold text-[#FF6B2B] leading-none mb-1"><AnimatedNumber value={24} suffix="/7" /></div>
               <div className="text-[10px] sm:text-[12px] md:text-[14px] font-semibold text-text-soft whitespace-nowrap">Dedicated Support</div>
             </div>
           </div>
