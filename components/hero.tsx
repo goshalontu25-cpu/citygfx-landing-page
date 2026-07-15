@@ -138,9 +138,10 @@ export function Hero() {
 
               <h1 className="text-[48px] sm:text-[64px] md:text-[80px] lg:text-[96px] font-black tracking-[-0.03em] leading-[1.05] text-[#111111] mb-6">
                 <span className="block">Stop the Scroll.</span>
-                <span className="block bg-gradient-to-r from-[#FF8A00] to-[#FF4500] bg-clip-text text-transparent">
-                  Start the <span className="relative inline-block">
-                    Sales.
+                <span className="block">
+                  <span className="bg-gradient-to-r from-[#FF8A00] to-[#FF4500] bg-clip-text text-transparent">Start the </span>
+                  <span className="relative inline-block">
+                    <span className="bg-gradient-to-r from-[#FF8A00] to-[#FF4500] bg-clip-text text-transparent">Sales.</span>
                     {/* Underline SVG */}
                     <svg className="absolute w-[110%] -bottom-[15%] left-[-5%] text-[#FF5A00] h-4 sm:h-6" viewBox="0 0 300 15" fill="none" preserveAspectRatio="none">
                       <path d="M2 13 C 50 2, 150 -2, 298 10" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
@@ -193,7 +194,7 @@ export function Hero() {
                 className="grid grid-cols-2 items-center w-full max-w-[700px] mt-8 sm:mt-12 gap-0"
               >
                 {/* Left 50% - Avatars */}
-                <div className="flex justify-center sm:justify-end sm:pr-8 relative">
+                <div className="flex justify-start pl-2 sm:pl-0 sm:justify-end sm:pr-8 relative">
                   <div className="flex -space-x-4 sm:-space-x-5">
                     {[
                       "https://res.cloudinary.com/dweciloal/image/upload/v1781728323/516560586_10131331804729044_953580499398814400_n_gmmqls.jpg",
@@ -201,7 +202,7 @@ export function Hero() {
                       "https://res.cloudinary.com/dweciloal/image/upload/v1781722187/ZPvYyoVHWnhugLPz9PA7j7C6pQ_jofkw8.jpg",
                       "https://res.cloudinary.com/dweciloal/image/upload/v1784104425/WhatsApp_Image_2026-07-03_at_14.31.13_1_he6d4a.jpg"
                     ].map((src, i) => (
-                      <div key={i} className="w-12 h-12 sm:w-[70px] sm:h-[70px] rounded-full border-[2px] sm:border-[3px] border-white overflow-hidden shadow-sm relative hover:scale-[1.03] transition-transform duration-300" style={{ zIndex: 10 - i }}>
+                      <div key={i} className="w-[48px] h-[48px] sm:w-[70px] sm:h-[70px] rounded-full border-[2px] sm:border-[3px] border-white overflow-hidden shadow-sm relative hover:scale-[1.03] transition-transform duration-300" style={{ zIndex: 10 - i }}>
                         <Image src={src} alt="Client" fill className="object-cover" />
                       </div>
                     ))}
