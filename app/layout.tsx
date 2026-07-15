@@ -10,6 +10,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "CityGfx | High-converting video ads",
   description: "High-converting video ads that drive engagement, leads, and sales. Professional AI-assisted video ad agency for e-commerce, local businesses, and digital marketers.",
+  icons: {
+    icon: "https://res.cloudinary.com/dweciloal/image/upload/v1784112538/Favicon_i0jzvz.png",
+  },
 };
 
 export default function RootLayout({
