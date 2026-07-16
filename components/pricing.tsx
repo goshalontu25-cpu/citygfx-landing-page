@@ -51,7 +51,7 @@ export const ovcPackages = [
   {
     id: "gold",
     title: "Gold (২টি OVC কম্বো)",
-    videos: "২টি ভিডিওর কম্বো। প্রতিটি সর্বোচ্চ ৬০ সেকেন্ড ডিউরেশন।",
+    videos: "২টি ভিডিওর কম্বো। প্রতিটি সর্বোচ্চ ৩০ সেকেন্ড ডিউরেশন।",
     icon: Star,
     iconBg: "bg-orange-50",
     iconColor: "text-[#FF6B2B]",
@@ -74,7 +74,7 @@ export const ovcPackages = [
   {
     id: "platinum",
     title: "Premium",
-    videos: "৩টি ভিডিওর কম্বো। প্রতিটি সর্বোচ্চ ৬০ সেকেন্ড ডিউরেশন।",
+    videos: "৩টি ভিডিওর কম্বো। প্রতিটি সর্বোচ্চ ৩০ সেকেন্ড ডিউরেশন।",
     icon: Crown,
     iconBg: "bg-green-50",
     iconColor: "text-green-600",
