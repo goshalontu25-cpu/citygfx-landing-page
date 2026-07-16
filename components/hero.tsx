@@ -136,7 +136,7 @@ export function Hero() {
                 <span>দেশের সেরা এ-আই এডস এবং কমার্শিয়াল স্টুডিও।</span>
               </div>
 
-              <h1 className="text-[48px] sm:text-[64px] md:text-[80px] lg:text-[96px] font-black tracking-[-0.03em] leading-[1.05] text-[#111111] mb-6">
+              <h1 className="text-[56px] sm:text-[72px] md:text-[90px] lg:text-[110px] font-black tracking-[-0.03em] leading-[1.05] text-[#111111] mb-6">
                 <span className="block">থেমে যাক স্ক্রল</span>
                 <span className="block">
                   <span className="bg-gradient-to-r from-[#FF8A00] to-[#FF4500] bg-clip-text text-transparent">শুরু হোক </span>
