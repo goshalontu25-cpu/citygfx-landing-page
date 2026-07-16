@@ -133,7 +133,7 @@ export function Hero() {
             >
               <div className="inline-flex items-center justify-center gap-2 bg-[#FEF0E6] text-[#F05A1B] px-5 py-2 rounded-full text-[13px] sm:text-[15px] font-medium mb-6 sm:mb-8">
                 <Rocket className="w-4 h-4 shrink-0" />
-                <span>Top-Rated AI Video Ads & Commercial Studio</span>
+                <span>দেশের সেরা এ-আই এডস এবং কমার্শিয়াল স্টুডিও।</span>
               </div>
 
               <h1 className="text-[48px] sm:text-[64px] md:text-[80px] lg:text-[96px] font-black tracking-[-0.03em] leading-[1.05] text-[#111111] mb-6">
