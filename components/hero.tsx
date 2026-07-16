@@ -150,9 +150,9 @@ export function Hero() {
                 </span>
               </h1>
               
-              <div className="mt-4 mb-6 text-[12px] sm:text-[14px] md:text-[16px] font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase">
-                <span className="text-gray-500">Next-gen video ads that </span>
-                <span className="text-[#FF5A00]">convert.</span>
+              <div className="mt-4 mb-6 text-[14px] sm:text-[16px] md:text-[18px] font-bold tracking-wide">
+                <span className="text-gray-500">হাই-এন্ড কমার্শিয়াল, </span>
+                <span className="text-[#FF5A00]">এখন সবার হাতের নাগালে।</span>
               </div>
 
               <p className="text-[15px] sm:text-[18px] md:text-[20px] text-gray-600 font-medium w-full max-w-[800px] px-4 mx-auto leading-[1.6]">
