@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { useState, Suspense } from "react"
-import { useSearchParams } from "next/navigation"
+import { useSearchParams, useRouter } from "next/navigation"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { GlassCard } from "@/components/ui/glass-card"
@@ -14,6 +14,7 @@ import { MobileNav } from "@/components/mobile-nav"
 
 function CheckoutContent() {
   const searchParams = useSearchParams()
+  const router = useRouter()
   const pkgId = searchParams.get("pkg") || "silver"
   const pkgType = searchParams.get("type") || "ovc"
   
@@ -74,10 +75,10 @@ function CheckoutContent() {
     <div className="pt-24 md:pt-32 pb-24 bg-[#FCFAF8] min-h-screen">
       <div className="container mx-auto max-w-[1100px] px-4 md:px-6">
         
-        <Link href="/#pricing" className="inline-flex items-center gap-2 text-text-soft hover:text-[#FF6A00] font-bold text-[14px] mb-8 transition-colors">
+        <button onClick={() => router.back()} className="inline-flex items-center gap-2 text-text-soft hover:text-[#FF6A00] font-bold text-[14px] mb-8 transition-colors cursor-pointer">
           <ArrowLeft className="w-4 h-4" />
           Back to Pricing
-        </Link>
+        </button>
         
         <div className="text-center mb-12">
           <h1 className="text-[32px] sm:text-[40px] font-black text-text-dark mb-4">Customize Your Package</h1>
