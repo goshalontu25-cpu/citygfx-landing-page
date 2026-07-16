@@ -36,7 +36,7 @@ export function MobileNav() {
   }, [])
 
   const navItems = [
-    { id: "home", label: "Home", icon: HomeIcon, href: "https://www.citygfx.agency" },
+    { id: "home", label: "Home", icon: HomeIcon, href: "/" },
     { id: "services", label: "Services", icon: ServicesIcon, href: "#services" },
     { id: "portfolio", label: "Portfolio", icon: PortfolioIcon, href: "#portfolio" },
     { id: "cta", label: "Contact", icon: ContactIcon, href: "#cta" },
