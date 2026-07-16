@@ -116,6 +116,17 @@ function CheckoutContent() {
                 )
               })}
             </div>
+
+            {/* Terms and Conditions */}
+            <div className="mt-10 bg-white p-6 rounded-2xl border border-border shadow-sm">
+              <h3 className="text-[18px] font-bold text-text-dark mb-4">Terms and Conditions (শর্তাবলি)</h3>
+              <div className="space-y-4 text-[14px] text-text-soft leading-[1.6]">
+                <p><span className="font-bold text-text-dark">পেমেন্ট পলিসি:</span> কাজ শুরু করার পূর্বে মোট বিলের ৭০% অগ্রিম প্রদান করতে হবে। প্রজেক্টের ফাইনাল এবং হাই-রেজোলিউশন ফাইল ডেলিভারি পাওয়ার পর বাকি ৩০% পেমেন্ট ক্লিয়ার করতে হবে।</p>
+                <p><span className="font-bold text-text-dark">রিভিশন পলিসি:</span> "আনলিমিটেড রিভিশন" শুধুমাত্র ক্লায়েন্ট কর্তৃক পূর্বে অনুমোদিত অরিজিনাল স্ক্রিপ্ট এবং রিকোয়ারমেন্টের উপর ভিত্তি করে প্রযোজ্য হবে। কাজ শুরু হওয়ার পর মূল কনসেপ্ট বা স্ক্রিপ্ট পরিবর্তন করলে কিংবা নতুন সিন যুক্ত করতে চাইলে অতিরিক্ত চার্জ প্রযোজ্য হবে।</p>
+                <p><span className="font-bold text-text-dark">ডেলিভারি টাইমলাইন:</span> প্রজেক্টের কাজের পরিধি অনুযায়ী কাজ শুরুর পূর্বেই ডেলিভারি টাইমলাইন নির্ধারণ করা হবে। ইমার্জেন্সি বা রাশ ডেলিভারির ক্ষেত্রে মোট বিলের উপর ২৫% অতিরিক্ত চার্জ যুক্ত হবে।</p>
+                <p><span className="font-bold text-text-dark">রিফান্ড পলিসি:</span> যেহেতু এটি ডিজিটাল এবং এআই প্রোডাকশন সার্ভিস, তাই প্রজেক্টের কাজ আনুষ্ঠানিকভাবে শুরু হয়ে যাওয়ার পর প্রদত্ত অগ্রিম পেমেন্ট কোনোভাবেই রিফান্ডযোগ্য নয়।</p>
+              </div>
+            </div>
           </div>
           
           {/* Right Column: Order Summary */}
