@@ -139,23 +139,28 @@ export function FAQ() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-orange-50 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6"
+              className="bg-orange-50 rounded-2xl p-6 sm:p-8 flex items-center gap-6"
             >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm">
-                  <Headphones className="w-6 h-6 text-[#FF6B2B]" />
-                </div>
-                <div>
-                  <h4 className="text-[16px] font-bold text-text-dark mb-1">আরও কিছু জানতে চান?</h4>
-                  <p className="text-[13px] font-medium text-text-soft">আমাদের সাপোর্ট টিম সবসময় আপনার জন্য প্রস্তুত।</p>
+              {/* Left Side (Icon) - ~20% */}
+              <div className="w-[25%] sm:w-[20%] flex items-center justify-center shrink-0">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center shadow-sm">
+                  <Headphones className="w-7 h-7 sm:w-8 sm:h-8 text-[#FF6B2B]" />
                 </div>
               </div>
-              <Link href="https://wa.me/8801617563535" target="_blank" rel="noopener noreferrer">
-                <Button className="bg-[#FF6B2B] text-white hover:bg-[#E85E22] rounded-full h-11 px-6 shadow-md shadow-[#FF6B2B]/20 shrink-0">
-                  <MessageSquare className="w-4 h-4 mr-2" />
-                  আমাদের সাথে কথা বলুন
-                </Button>
-              </Link>
+              
+              {/* Right Side (Content & Button) - ~80% */}
+              <div className="w-[75%] sm:w-[80%] flex flex-col items-start gap-4">
+                <div>
+                  <h4 className="text-[16px] sm:text-[18px] font-bold text-text-dark mb-1">আরও কিছু জানতে চান?</h4>
+                  <p className="text-[13px] sm:text-[14px] font-medium text-text-soft">আমাদের সাপোর্ট টিম সবসময় আপনার জন্য প্রস্তুত।</p>
+                </div>
+                <Link href="https://wa.me/8801617563535" target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-[#FF6B2B] text-white hover:bg-[#E85E22] rounded-full h-11 px-6 shadow-md shadow-[#FF6B2B]/20 shrink-0">
+                    <MessageSquare className="w-4 h-4 mr-2" />
+                    আমাদের সাথে কথা বলুন
+                  </Button>
+                </Link>
+              </div>
             </motion.div>
           </div>
 
