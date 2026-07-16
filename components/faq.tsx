@@ -143,8 +143,8 @@ export function FAQ() {
             >
               {/* Left Side (Icon) - ~20% */}
               <div className="w-[25%] sm:w-[20%] flex items-center justify-center shrink-0">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center shadow-sm">
-                  <Headphones className="w-7 h-7 sm:w-8 sm:h-8 text-[#FF6B2B]" />
+                <div className="w-20 h-20 sm:w-[90px] sm:h-[90px] rounded-full bg-white flex items-center justify-center shadow-sm">
+                  <Headphones className="w-10 h-10 sm:w-11 sm:h-11 text-[#FF6B2B]" />
                 </div>
               </div>
               
