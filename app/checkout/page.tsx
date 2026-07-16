@@ -96,7 +96,7 @@ function CheckoutContent() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {addonsData.map((addon, idx) => {
                 if (pkgType === "ovc" && addon.title.includes("(Talking Head)")) return null;
-                if (pkgType === "talkingAd" && addon.title.includes("(OVC)")) return null;
+                if (pkgType === "talking-ad" && addon.title.includes("(OVC)")) return null;
 
                 const isSelected = selectedAddons.includes(idx)
                 return (
