@@ -156,8 +156,7 @@ export function Hero() {
               </div>
 
               <p className="text-[15px] sm:text-[18px] md:text-[20px] text-gray-600 font-medium w-full max-w-[800px] px-4 mx-auto leading-[1.6]">
-                We craft hyper-realistic AI commercials and authentic UGC content that doesn't just look stunning—it converts.
-                Built for Meta, TikTok, and Shopify, our creatives are engineered to make your brand stand out and scale.
+                এখন বড় প্রোডাকশন হাউস বা লাখ লাখ টাকার বাজেট ছাড়াই আপনার ব্র্যান্ডের জন্য তৈরি করা সম্ভব প্রফেশনাল OVC স্টাইলের AI কমার্শিয়াল, সঙ্গে অথেন্টিক UGC কনটেন্ট। আপনার ব্র্যান্ডের জন্য আমরা তৈরি করি এমন কনটেন্ট, যা স্ক্রল থামাবে এবং আনবে আরও বেশি সেলস।
               </p>
             </motion.div>
 
